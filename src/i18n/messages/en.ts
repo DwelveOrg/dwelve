@@ -180,12 +180,12 @@ translation: {
           description:
             "This page didn't load. Trying again often fixes it — if it keeps happening, the problem is on our side.",
           retry: "Try again",
-          home: "Go to dashboard",
+          home: "Back to home",
         },
         notFound: {
           title: "Page not found",
           description: "That link does not lead anywhere. It may have been moved or deleted.",
-          home: "Go to dashboard",
+          home: "Back to home",
         },
         navbarTitle: "Dwelve",
         breadcrumb: {
