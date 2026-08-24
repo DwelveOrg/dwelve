@@ -7,11 +7,12 @@ dependency graph.
 
 ## Knowledge
 
-The only page route is `src/app/(landing)/page.tsx`. Authentication helpers, React Query provider
-plumbing, many UI components, translation namespaces, packages, CSS tokens, and CI environment
-values remain from the former combined application. Presence in `src`, a catalog, or `package.json`
-does not prove a supported marketing capability; trace reachability from the landing route before
-reusing it.
+The only page route is `src/app/(landing)/page.tsx`. The old backend transport, safe-action, upload,
+date, motion-helper, and several shared-component files were removed after the split. React Query
+provider/key/refresh plumbing, some UI components, translation namespaces, packages, CSS tokens,
+and application-oriented `next.config.ts` settings/comments remain. CI no longer supplies API or
+session variables. Presence in `src`, a catalog, config, or `package.json` does not prove a supported
+marketing capability; trace reachability from the landing route before reusing it.
 
 The old application documentation was removed from this repository because byte-identical/current
 copies belong in `../app/docs` and the pre-split files remain in Git history.
@@ -22,6 +23,7 @@ copies belong in `../app/docs` and the pre-split files remain in Git history.
 - `src/app/providers.tsx`
 - `src/i18n/messages/`
 - `package.json`
+- `next.config.ts`
 - `.github/workflows/ci.yml`
 
 ## Implications

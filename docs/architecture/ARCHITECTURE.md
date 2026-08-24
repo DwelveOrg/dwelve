@@ -24,24 +24,26 @@ flowchart LR
   class-based themes, and a React Query provider.
 - Language and theme are the only meaningful persistent client state:
   `localStorage["gf-language"]` and `localStorage["dwelve-theme"]`.
-- React Query and backend helpers remain from the pre-split application but have
-  no active marketing consumer. They are residue, not the approved data layer
-  for a hypothetical future form.
+- The React Query provider and query-key/refresh helpers remain from the
+  pre-split application but have no active marketing data consumer. The old
+  backend transport, safe-action, upload, and date helpers have been removed.
+  Remaining query infrastructure is residue, not the approved data layer for a
+  hypothetical future form.
 
 ## Main modules
 
-| Location | Responsibility |
-|---|---|
-| `src/app/(landing)/_sections` | Page sections and illustrative product mockups |
-| `src/app/(landing)/_components` | Landing-only navbar, footer, hero, headings, bullets |
-| `src/components/ui/Button.tsx` | Shared button/link variants, including marketing brand variants |
-| `src/components/ui/Surface.tsx` | Shared bordered surface recipe |
-| `src/components/Custom/DwelveLogo.tsx` | Canonical rendered mark |
-| `src/i18n/messages/{en,ru,uz}.ts` | Translation catalogs |
-| `src/lib/hosts.ts` | Configurable authenticated-app origin |
-| `src/lib/seo.ts` | Canonical marketing origin and metadata copy |
-| `src/lib/seo-routes.ts` | Indexable and redirected route registries |
-| `src/proxy.ts` | Cross-host compatibility redirect |
+| Location                               | Responsibility                                                  |
+| -------------------------------------- | --------------------------------------------------------------- |
+| `src/app/(landing)/_sections`          | Page sections and illustrative product mockups                  |
+| `src/app/(landing)/_components`        | Landing-only navbar, footer, hero, headings, bullets            |
+| `src/components/ui/Button.tsx`         | Shared button/link variants, including marketing brand variants |
+| `src/components/ui/Surface.tsx`        | Shared bordered surface recipe                                  |
+| `src/components/Custom/DwelveLogo.tsx` | Canonical rendered mark                                         |
+| `src/i18n/messages/{en,ru,uz}.ts`      | Translation catalogs                                            |
+| `src/lib/hosts.ts`                     | Configurable authenticated-app origin                           |
+| `src/lib/seo.ts`                       | Canonical marketing origin and metadata copy                    |
+| `src/lib/seo-routes.ts`                | Indexable and redirected route registries                       |
+| `src/proxy.ts`                         | Cross-host compatibility redirect                               |
 
 ## Dependency responsibilities
 
@@ -68,6 +70,7 @@ remain in `package.json` or `src/`.
 ## Known gaps
 
 - There is no first-party test suite.
-- The application-era catalogs, providers, utilities, components, and
-  dependencies have not yet been reduced to the marketing dependency graph.
+- The application-era catalogs, React Query provider/helpers, some components,
+  dependencies, and `next.config.ts` settings/upload comments have not yet been
+  fully reduced to the marketing dependency graph.
 - No supported server-side lead/contact form exists; support links use email.
