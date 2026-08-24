@@ -16,8 +16,8 @@ run the application separately and set `NEXT_PUBLIC_APP_URL` to its origin.
 
 ## Environment
 
-| Variable | Purpose | Required | Exposure |
-|---|---|---:|---|
+| Variable              | Purpose                                           |                                Required | Exposure                    |
+| --------------------- | ------------------------------------------------- | --------------------------------------: | --------------------------- |
 | `NEXT_PUBLIC_APP_URL` | Override login/signup/redirect application origin | No; defaults to `https://app.dwelve.uz` | Browser-visible, build-time |
 
 No server secret is required by current marketing code. Application-era API,
@@ -25,15 +25,15 @@ session, Google, and support variables do not belong in this deployment.
 
 ## Commands
 
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Turbopack development server |
-| `npm run dev:webpack` | Webpack development fallback |
-| `npm run lint` | ESLint |
-| `npx tsc --noEmit` | Type check (used in CI, no package alias) |
+| Command                  | Purpose                                            |
+| ------------------------ | -------------------------------------------------- |
+| `npm run dev`            | Turbopack development server                       |
+| `npm run dev:webpack`    | Webpack development fallback                       |
+| `npm run lint`           | ESLint                                             |
+| `npx tsc --noEmit`       | Type check (used in CI, no package alias)          |
 | `npm run check:contrast` | Validate design-token contrast/palette constraints |
-| `npm run build` | Webpack production build |
-| `npm run start` | Serve the built app |
+| `npm run build`          | Webpack production build                           |
+| `npm run start`          | Serve the built app                                |
 
 No first-party `test` script or browser automation is configured. Meaningful
 changes require manual browser verification in addition to the static gates.
@@ -44,9 +44,8 @@ changes require manual browser verification in addition to the static gates.
 high-severity npm audit on pushes and pull requests. CodeQL scans JavaScript and
 TypeScript on main/pull requests and weekly.
 
-The CI workflow still supplies app-era API/session environment values; current
-marketing code does not consume them. Removing that residue is a separate
-configuration cleanup, not required to understand runtime behavior.
+CI deliberately supplies no API/session environment: the marketing build must
+remain independent of backend or secret configuration.
 
 ## Deployment
 

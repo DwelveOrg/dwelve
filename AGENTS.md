@@ -46,6 +46,7 @@ src/components/ui/       -> shared primitives; only a subset is active here
 public/logo/             -> canonical brand and social assets
 docs/                    -> stable marketing-site knowledge
 .agent-memory/           -> durable decisions, discoveries, and gotchas
+.claude/                 -> optional vendor-specific workflows; not project truth
 ```
 
 ## Critical engineering rules
@@ -67,6 +68,8 @@ docs/                    -> stable marketing-site knowledge
   documentation.
 - Do not revive unused application-era helpers or dependencies without a real
   marketing requirement and a documentation update.
+- Treat `.claude/skills` as optional execution aids. They never override this
+  file, current code, `/docs`, or the task's explicit requirements.
 
 ## Default agent loop
 
