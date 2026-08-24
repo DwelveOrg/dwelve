@@ -8,16 +8,17 @@ permissions:
   contents: read
 
 concurrency:
-  group: frontend-ci-${{ github.ref }}
+  group: marketing-ci-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   verify:
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    env:
-      DWELVE_API_BASE_URL: http://127.0.0.1:5000/api/v1
-      SESSION_SECRET: ci-only-session-secret-with-at-least-32-characters
+    # No env: this site has no backend client and no session code — both moved
+    # to DwelveOrg/app with the split. The build must keep passing without any
+    # API or secret configuration; if a step ever needs one again, something
+    # application-shaped has been added to the marketing repo by mistake.
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
