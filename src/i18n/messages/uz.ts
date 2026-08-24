@@ -160,12 +160,12 @@ translation: {
           description:
             "Sahifa yuklanmadi. Koʻpincha qayta urinish yordam beradi — agar xato takrorlansa, muammo biz tomonda.",
           retry: "Qayta urinish",
-          home: "Boshqaruv paneliga",
+          home: "Bosh sahifaga",
         },
         notFound: {
           title: "Sahifa topilmadi",
           description: "Bu havola hech qayerga olib bormaydi. Sahifa koʻchirilgan yoki oʻchirilgan boʻlishi mumkin.",
-          home: "Boshqaruv paneliga",
+          home: "Bosh sahifaga",
         },
         navbarTitle: "Dwelve",
         breadcrumb: {

@@ -16,9 +16,18 @@ export const PUBLIC_INDEXABLE_ROUTES = [
   },
 ] as const;
 
-/** Private application route families shared with the robots metadata route. */
+/**
+ * Application route families. They live on the app origin (`DwelveOrg/app`,
+ * app.dwelve.uz); here they are exactly what the proxy 308-redirects there
+ * and what robots.txt disallows. The auth pages are listed too — they are
+ * application URLs like any other now.
+ */
 export const PRIVATE_ROUTE_PREFIXES = [
   "/api/",
+  "/login",
+  "/signup",
+  "/password-reset",
+  "/reset-password",
   "/assignments",
   "/dashboard",
   "/exam",

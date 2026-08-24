@@ -87,17 +87,11 @@ Always work on the `staging` branch for repository changes unless the maintainer
 
 ## Project structure
 
-This is a Next.js App Router frontend.
+This is the Next.js marketing site of a two-repo split: this repo serves `dwelve.uz` only, and the application (auth, dashboard, studio, exam) is the separate `DwelveOrg/app` repository on `app.dwelve.uz`. Application features are never added here. See `docs/architecture/DOMAINS.md`.
 
 Application routes live in `src/app`, with route groups such as:
 
-- `src/app/(landing)` — public marketing routes. Served only on `dwelve.uz`
-  once the host split is active; the platform lives on `app.dwelve.uz`. Before
-  growing this surface, check the repo-split triggers in
-  `docs/architecture/DOMAINS.md` — if one fires, ask the maintainer before
-  restructuring anything.
-- `src/app/(authentication)` — login, signup, password reset
-- `src/app/(root)` — authenticated dashboard routes
+- `src/app/(landing)` — the marketing pages (the only route group left)
 
 Shared code:
 
