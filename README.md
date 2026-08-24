@@ -1,46 +1,38 @@
-# Dwelve Docs
+# Dwelve Marketing Site
 
-This repository contains the Dwelve frontend and its stable project guidance.
+The public, indexable site for Dwelve. It serves the marketing experience on
+`dwelve.uz` and links into the separate authenticated application on
+`app.dwelve.uz`.
 
-## Files
+Start with:
 
-- `docs/README.md` - canonical documentation structure and reading order.
-- `docs/product/PRD.md` - product scope, target users, priorities, roadmap, risks.
-- `docs/architecture/ARCHITECTURE.md` - mandatory frontend architecture, backend request, schema, form, and data-fetching rules.
-- `docs/design/design-system.md` - typography, color, layout, component, script, and accessibility rules.
-- `AGENTS.md` - root-level coding-agent guidance.
-- `CLAUDE.md` - root-level Claude Code guidance.
+- [`AGENTS.md`](AGENTS.md) — repository operating rules
+- [`docs/README.md`](docs/README.md) — context router and documentation map
+- [`PRODUCT.md`](PRODUCT.md) — product and marketing scope
+- [`.agent-memory/README.md`](.agent-memory/README.md) — durable memory policy
 
-## Run locally
+## Local development
 
-The frontend's production values may live in `.env`, but local development must
-use the Git-ignored `.env.local` file so it never sends local sessions or API
-requests to production. A local configuration is included in the working tree;
-to recreate it, copy `.env.example` to `.env.local`.
-
-Start the local NestJS API on port 5001 first, following
-`../backend_nestJS/RUN_BACKEND.md`. Then run:
+Requires Node.js 22.13 or newer.
 
 ```bash
-cd frontend
+npm ci
+cp .env.example .env.local
 npm run dev
 ```
 
-Open `http://localhost:3000`. The local frontend calls
-`http://localhost:5001/api/v1` and uses a development-only session key.
+Open `http://localhost:3000`. `NEXT_PUBLIC_APP_URL` is optional; set it to a
+local app origin only when running the separate product repository alongside
+this site. Without it, CTAs target `https://app.dwelve.uz`.
 
-Google sign-in is intentionally disabled in the supplied local configuration.
-To test it, create or use a Google OAuth web-client ID that authorizes
-`http://localhost:3000`, then set `NEXT_PUBLIC_GOOGLE_CLIENT_ID` in
-`.env.local`; its matching client ID must also be configured in the local
-backend.
+## Verification
 
-## What Does Not Belong Here
+```bash
+npm run lint
+npx tsc --noEmit
+npm run check:contrast
+npm run build
+```
 
-- Generated build output.
-- Local environment files.
-- Temporary notes that are not maintained.
-
-## Maintenance Rule
-
-When code and docs disagree, update both in the same pull request.
+There is no configured first-party test suite. Browser verification is required
+for meaningful UI, responsive, accessibility, language, SEO, or redirect work.
