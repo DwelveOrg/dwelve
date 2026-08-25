@@ -130,6 +130,11 @@ outside every layout, so `Providers` — and therefore the i18next instance — 
 not exist there. It reads the catalogs with `tServer` instead. Any future
 component that can render outside the provider tree has the same constraint.
 
+Client copy comes from a **per-language** instance supplied by `I18nextProvider`.
+Never call `i18n.changeLanguage()`: it notifies every mounted `useTranslation`
+synchronously, and the instance is also shared across server requests. Switching
+language is a navigation, not a state change.
+
 ## Accessibility rules
 
 - Preserve semantic headings, lists, nav labels, and native disclosure/button

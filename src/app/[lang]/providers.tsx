@@ -1,28 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { ThemeProvider } from "next-themes";
 import { I18nextProvider } from "react-i18next";
 
-import i18n, { initI18n } from "@/i18n";
+import { getI18n } from "@/i18n";
 import type { AppLanguage } from "@/i18n/resources";
 import QueryProvider from "@/lib/query/QueryProvider";
 
 /**
  * `lang` comes from the URL, through the root layout.
  *
- * `initI18n` is called from the `useState` initialiser rather than an effect on
- * purpose: that runs during this component's first render, before any child
- * renders, so the tree's very first output is already in the right language and
- * matches the server's. An effect would run *after* hydration, which is one
- * frame of English on every Russian and Uzbek page and a hydration mismatch on
- * every translated string.
+ * `getI18n(lang)` is called straight from the render body — no `useState`, no
+ * effect. It returns the instance *for that language*, so there is nothing to
+ * mutate and nothing to synchronise: the first render is already in the right
+ * language on both the server and the client, which is what keeps hydration
+ * quiet on `/ru` and `/uz`.
  *
- * There is no stored language preference any more. It used to live in
- * `localStorage` and override whatever the server sent, which is unworkable now
- * that the language is part of the URL — it would let one URL show two different
- * contents and quietly contradict the page's own `canonical`/`hreflang`. The URL
- * is the preference; `LanguageSwitcher` changes it by navigating.
+ * Both of the obvious alternatives are bugs, and both were shipped before this:
+ * a `useState` initialiser that calls `changeLanguage` updates every mounted
+ * `useTranslation` during render, and doing it in an effect renders one frame in
+ * the wrong language. `src/i18n/index.ts` has the full account.
+ *
+ * There is no stored language preference. It used to live in `localStorage` and
+ * override whatever the server sent, which is unworkable now that the language
+ * is part of the URL — it would let one URL show two different contents and
+ * quietly contradict the page's own `canonical`/`hreflang`. The URL is the
+ * preference; `LanguageSwitcher` changes it by loading the other URL.
  */
 export default function Providers({
   children,
@@ -31,13 +34,7 @@ export default function Providers({
   children: React.ReactNode;
   lang: AppLanguage;
 }) {
-  const [instance] = useState(() => initI18n(lang));
-
-  // Client-side navigation between `/pricing` and `/ru/pricing` remounts nothing
-  // above this component, so the initialiser above does not re-run.
-  useEffect(() => {
-    if (i18n.language !== lang) void i18n.changeLanguage(lang);
-  }, [lang]);
+  const instance = getI18n(lang);
 
   return (
     <I18nextProvider i18n={instance}>

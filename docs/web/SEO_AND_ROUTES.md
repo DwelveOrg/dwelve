@@ -24,12 +24,20 @@ Consequences worth knowing:
 - Titles, descriptions, canonicals and JSON-LD are resolved **on the server** in
   the page's language via `src/i18n/server.ts`. Nothing is corrected after
   hydration.
-- The client i18next instance is initialised from the URL in `Providers`, during
-  the first render. There is no stored language preference: a saved language
-  that rewrote `/pricing` into Russian would give one URL two contents and
-  contradict its own canonical.
+- The client reads a **per-language** i18next instance (`getI18n(lang)`), never a
+  shared one that changes language. Not a style choice: a shared instance leaks
+  across server requests — `"use client"` components are still SSR'd, where the
+  module is one per-process singleton — and on the client `changeLanguage()`
+  during render updates every mounted component mid-render. See
+  `.agent-memory/gotchas/i18n-instance-per-language.md`.
+- There is no stored language preference: a saved language that rewrote
+  `/pricing` into Russian would give one URL two contents and contradict its own
+  canonical.
 - `LanguageSwitcher` navigates to the same page in the target language rather
-  than resetting to the home page.
+  than resetting to the home page, and does so as a **full document load** —
+  language is a property of the document (`<html lang>`, metadata, canonical,
+  `hreflang`, the instance), and every page is prerendered, so the reload is
+  cheap.
 
 ## Routes
 

@@ -22,12 +22,14 @@ language prefix before matching application routes, so `/ru/login` is recognised
 
 Two consequences that are easy to undo by accident:
 
-- `Providers` calls `initI18n(lang)` from a `useState` initialiser, not an effect. That runs during
-  the first render, before children render, so the client's first output matches the server's.
-  Moving it to an effect reintroduces a hydration mismatch on every translated string.
+- `Providers` calls `getI18n(lang)` from the render body, and that function returns a *per-language*
+  instance rather than mutating a shared one. Both obvious alternatives are bugs — see
+  [[I18n instance per language]] — and neither is visible until you switch language twice or serve
+  two languages from one process.
 - The stored language preference was **deliberately deleted**. A saved language that rewrote
   `/pricing` into Russian would give one URL two contents and contradict that page's own canonical
-  and `hreflang`. The URL is the preference; `LanguageSwitcher` navigates.
+  and `hreflang`. The URL is the preference; `LanguageSwitcher` loads the other URL as a full
+  document navigation.
 
 `LANGUAGE_TAGS` supplies BCP-47 tags for `<html lang>` and `hreflang`: Uzbek is `uz-Latn`, because
 bare `uz` leaves a crawler to guess between two scripts.

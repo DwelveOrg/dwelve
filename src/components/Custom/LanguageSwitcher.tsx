@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Check, Languages } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -38,9 +37,22 @@ import { cn } from "@/lib/utils";
  *      assistive technology switches voice on the label instead of reading
  *      Cyrillic through an English pronunciation model.
  *
- * These are plain `<a>` navigations (`prefetch={false}`): a client-side
- * transition would keep the old `<html lang>` until React reconciled, and the
- * whole point is that the document's language is correct from the first byte.
+ * These are plain `<a>` elements, not `next/link`, and that is load-bearing
+ * rather than an oversight.
+ *
+ * A client-side transition keeps the live i18next instance and the mounted tree
+ * and asks them to become Russian in place. That is how this shipped, and it
+ * threw on the first switch: the instance is created in a `useState`
+ * initialiser, so the `changeLanguage()` it triggered ran during `Providers`'
+ * render, and `languageChanged` fires synchronously — so every `useTranslation`
+ * still mounted from the previous page called `setState` mid-render. React's
+ * "Cannot update a component while rendering a different component".
+ *
+ * A full document load sidesteps the whole class of problem. Language is a
+ * property of the document, not of a component: `<html lang>`, the metadata, the
+ * canonical, the `hreflang` set and the i18next instance all have to change
+ * together, and every one of them is already correct in the server's response
+ * for the target URL. Every page here is prerendered, so the reload is cheap.
  */
 export default function LanguageSwitcher({ className }: { className?: string }) {
   const { t } = useTranslation();
@@ -70,17 +82,16 @@ export default function LanguageSwitcher({ className }: { className?: string }) 
           const isCurrent = lang === current;
           return (
             <DropdownMenuItem key={lang} asChild>
-              <Link
+              <a
                 href={localizedPath(pathname, lang)}
                 hrefLang={LANGUAGE_TAGS[lang]}
                 lang={LANGUAGE_TAGS[lang]}
-                prefetch={false}
                 aria-current={isCurrent ? "true" : undefined}
                 className="flex w-full items-center justify-between gap-3"
               >
                 {LANGUAGE_ENDONYMS[lang]}
                 {isCurrent ? <Check aria-hidden className="size-4 text-primary" /> : null}
-              </Link>
+              </a>
             </DropdownMenuItem>
           );
         })}

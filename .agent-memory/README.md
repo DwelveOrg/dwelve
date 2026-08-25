@@ -21,6 +21,7 @@ not permanent memory.
 - [[Indexable route registration]] — the files that must agree for a new public route
 - [[Uzbek okina renders wide]] — U+02BB is wide in IBM Plex Sans; it is not a missing glyph
 - [[Not found under a dynamic root]] — why the 404 needs `global-not-found.tsx`, and how it fails silently
+- [[I18n instance per language]] — never `changeLanguage()` during render, and never share one instance across server requests
 
 ## Maintenance
 
