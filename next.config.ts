@@ -90,6 +90,14 @@ const nextConfig: NextConfig = {
     serverActions: {
       bodySizeLimit: "4.5mb",
     },
+    // The root layout lives at `app/[lang]/layout.tsx`, so Next has no single
+    // root layout to compose a 404 from. Without this flag a not-found renders
+    // an `__next_error__` document with an EMPTY body — correct status, correct
+    // noindex, no visible content until JS hydrates. `app/global-not-found.tsx`
+    // is Next's documented answer for a dynamic-segment root and renders real
+    // server HTML. Dropping the flag degrades to Next's built-in 404 rather than
+    // breaking the build.
+    globalNotFound: true,
   },
   // No remote image hosts. The auth panels used to hotlink Unsplash; their visuals are now
   // rendered from design tokens, so nothing outside this origin is loaded.

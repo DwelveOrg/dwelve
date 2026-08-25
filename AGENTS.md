@@ -11,7 +11,8 @@ centers. This repository explains that product and routes visitors into the
 separate authenticated application. It serves `dwelve.uz`; the product app is
 `DwelveOrg/app` on `app.dwelve.uz`.
 
-Current state: one production-oriented, trilingual landing page. There is no
+Current state: five production-oriented pages, each published in three
+languages. There is no
 authentication, product dashboard, database, or supported backend API flow in
 this repository. Application-era code remains in a few shared folders; do not
 mistake residue for an active feature.
@@ -34,20 +35,29 @@ when changing framework behavior.
 ## Repository map
 
 ```text
-src/app/(landing)/       -> landing route, sections, and local components
-src/app/layout.tsx       -> fonts, metadata defaults, global providers
-src/app/robots.ts        -> marketing crawl policy
-src/app/sitemap.ts       -> explicit indexable route list
-src/proxy.ts             -> legacy application-route redirects
-src/lib/hosts.ts         -> app origin and appHref()
-src/lib/seo*.ts          -> canonical origin, metadata constants, route registry
-src/i18n/messages/       -> en/ru/uz catalogs
-src/components/ui/       -> shared primitives; only a subset is active here
-public/logo/             -> canonical brand and social assets
-docs/                    -> stable marketing-site knowledge
-.agent-memory/           -> durable decisions, discoveries, and gotchas
-.claude/                 -> optional vendor-specific workflows; not project truth
+src/app/[lang]/layout.tsx        -> ROOT layout: fonts, metadata defaults, providers
+src/app/[lang]/(landing)/        -> all five marketing pages + shared chrome
+src/app/global-not-found.tsx     -> server-rendered 404 (all layouts bypassed)
+src/app/fonts.ts                 -> shared font faces
+src/app/robots.ts                -> marketing crawl policy
+src/app/sitemap.ts               -> explicit indexable route list
+src/proxy.ts                     -> language routing + legacy app-route redirects
+src/lib/hosts.ts                 -> app origin and appHref()
+src/lib/seo*.ts                  -> origin, route registry, localized paths, hreflang
+src/lib/page-metadata.ts         -> per-page, per-language metadata and JSON-LD
+src/lib/routing.ts               -> client language + localized-href helpers
+src/i18n/messages/               -> en/ru/uz catalogs
+src/i18n/server.ts               -> catalog reads from Server Components
+src/components/ui/               -> shared primitives; only a subset is active here
+public/logo/                     -> canonical brand and social assets
+docs/                            -> stable marketing-site knowledge
+.agent-memory/                   -> durable decisions, discoveries, and gotchas
+.claude/                         -> optional vendor-specific workflows; not project truth
 ```
+
+There is no `src/app/layout.tsx`. Every route lives under the `[lang]` segment,
+which is what makes the language a root parameter; see
+`.agent-memory/decisions/localized-url-routing.md`.
 
 ## Critical engineering rules
 
@@ -55,8 +65,11 @@ docs/                    -> stable marketing-site knowledge
   dashboards, studio, exams, invites, and school workflows belong in `app`.
 - Send every application CTA through `appHref()`; do not hard-code a second app
   origin.
-- Register a new public route in `PUBLIC_INDEXABLE_ROUTES` and review metadata,
-  sitemap, robots, canonical URL, and redirects together.
+- Register a new public route in `PUBLIC_INDEXABLE_ROUTES`; metadata, sitemap,
+  canonical, `hreflang` and Open Graph locales are derived from that entry by
+  `pageMetadata()`. One entry means three URLs (en/ru/uz).
+- Link internally with `LocaleLink`, never a raw `next/link`: a raw link drops a
+  Russian reader onto the English page and nothing will catch it.
 - Keep `PRIVATE_ROUTE_PREFIXES`, `src/proxy.ts`, and `robots.ts` aligned. Legacy
   application links must preserve path and query when redirected.
 - Reuse `Button`, `Surface`, `DwelveLogo`, section helpers, and existing tokens.

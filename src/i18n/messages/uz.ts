@@ -3005,8 +3005,353 @@ translation: {
         comingSoon: "Tez kunda",
         primaryNav: "Asosiy navigatsiya",
       },
+      seo: {
+        ogImageAlt: "Dwelve onlayn test platformasi",
+        offerDescription: "Erta kirish davrida bepul",
+        home: {
+          title: "Dwelve | Maktablar uchun AI yordamidagi onlayn testlar",
+          description: "Onlayn testlarni sunʼiy intellekt bilan yarating, oʻtkazing va baholang. Dwelve oʻqituvchilar, maktablar va oʻquv markazlariga oʻquv materiallarini testga aylantirish va oʻquvchilar natijasini tahlil qilishda yordam beradi.",
+        },
+        pricing: {
+          title: "Narxlar — erta kirish davrida bepul",
+          description: "Erta kirish davrida Dwelve bepul: cheksiz testlar va sinflar, oʻz materialingizdan savol qoralamalari, bir zumda baholash va sinf tahlili. Kartasiz, hisob-fakturasiz, sotuv qoʻngʻirogʻisiz.",
+        },
+        about: {
+          title: "Dwelve haqida — oʻqituvchilar bilan qurilgan test platformasi",
+          description: "Dwelve nima uchun kerak, biz amal qiladigan toʻrtta tamoyil va mahsulot bugun qay holatda. Maktab va oʻquv markazlari uchun ingliz, rus va oʻzbek tillarida.",
+        },
+        contact: {
+          title: "Dwelve bilan bogʻlanish — maktablar, savollar va xatoliklar",
+          description: "Dwelve ustida ishlayotgan odamlarga yozing: maktabingiz haqida, savol bilan yoki nimadir buzilgan boʻlsa. Haqiqiy manzillar, xatga nima qoʻshish kerakligi va javob muddati.",
+        },
+        privacy: {
+          title: "Maxfiylik siyosati",
+          description: "Dwelve nimani yigʻadi, nima uchun, qancha saqlaydi va maktab nimani oʻchirishni soʻrashi mumkin. Oʻqish uchun yozilgan.",
+        },
+        terms: {
+          title: "Foydalanish shartlari",
+          description: "Erta kirish davrida Dwelvedan foydalanish shartlari: biz nimani taqdim etamiz, maktab nimaga javob beradi va har ikki tomon buni qanday toʻxtatishi mumkin.",
+        },
+      },
       landing: {
+        pricing: {
+          eyebrow: "Narxlar",
+          title: "Bitta reja. Dwelve erta kirishda ekan — bepul.",
+          lead: "Hozircha pullik daraja ham, sinov muddati taymeri ham yoʻq, kelishadigan narsa ham yoʻq. Har bir oʻqituvchi va har bir maktab mahsulotni toʻliq oladi — bu oʻzgarishidan oldin sizni ogohlantiramiz.",
+          plan: {
+            name: "Erta kirish",
+            price: "Bepul",
+            period: "har bir oʻqituvchi va har bir sinf uchun",
+            description: "Namuna emas, toʻliq mahsulot. Oʻz materialingizdan test tuzing, har bir savolni koʻrib chiqing, sinf uchun nashr eting va natijalarni oʻqing — test, sinf va oʻquvchi soniga cheklovsiz.",
+            cta: "Hisob yaratish",
+            ctaNote: "Kartasiz. Hisob-fakturasiz. Sotuv qoʻngʻirogʻisiz.",
+            included: {
+              i1: "Cheksiz test, savol, sinf va oʻquvchi",
+              i2: "PDF, ish varaqasi va dars konspektidan savol qoralamalari",
+              i3: "Oʻquvchi koʻrishidan oldin oʻqituvchi koʻrib chiqishi",
+              i4: "Avtomatik baholash va sinf boʻyicha tahlil",
+              i5: "Barcha sinflaringiz uchun umumiy savollar banki",
+              i6: "Taymerli va majburiy toʻliq ekranli imtihonlar",
+              i7: "Ingliz, rus va oʻzbek tillari — oʻqituvchi uchun ham, oʻquvchi uchun ham",
+            },
+          },
+          note: {
+            title: "Erta kirish tugaganda nima boʻladi",
+            p1: "Vaqti kelib Dwelve maktab va oʻquv markazlari uchun pullik boʻladi. Buni keyinroq kutilmaganda aytgandan koʻra, hozir aytganimiz maʼqul.",
+            p2: "Narxlar belgilanganda, ular avval shu sahifada paydo boʻladi va har bir hisobga oʻzgarishdan kamida 30 kun oldin xat yuboriladi.",
+            p3: "Testlaringiz, savollaringiz va natijalaringiz maktabingizga tegishli. Davom ettirmaslikka qaror qilsangiz, ayting — biz ularni siz uchun yuklab beramiz yoki oʻchiramiz.",
+          },
+          faq: {
+            title: "Bepul reja tugʻdiradigan savollar",
+            q1: {
+              question: "Bu rostdan bepulmi yoki sinov muddatimi?",
+              answer: "Bu bepul va hech qanday taymer yoʻq. Dwelve erta kirishda: mahsulot haqiqiy test oʻtkazishga yetarlicha tayyor, ammo shu qadar yoshki, biz undan pul olishdan koʻra oʻqituvchilarning undan foydalanishini afzal koʻramiz.",
+            },
+            q2: {
+              question: "Qanday cheklovlar bor?",
+              answer: "Test, savol, sinf va oʻquvchi soniga cheklov yoʻq. Faqat hamma uchun amal qiladigan chegaralar bor — masalan, PDF import qilishdagi fayl hajmi — sizni tushirib qoʻygan past daraja emas.",
+            },
+            q3: {
+              question: "Ogohlantirmasdan pul ola boshlaysizmi?",
+              answer: "Yoʻq. Avval shu sahifa oʻzgaradi, keyin narx oʻzgarishidan kamida 30 kun oldin har bir hisobga xat boradi. Siz allaqachon yaratgan hech narsa bunday ogohlantirishsiz toʻsib qoʻyilmaydi.",
+            },
+            q4: {
+              question: "Dwelvedan foydalanishni toʻxtatsam, testlarim nima boʻladi?",
+              answer: "Ular sizniki boʻlib qoladi. Ayting — biz ularni yuklab beramiz yoki ularga bogʻliq hamma narsa bilan birga oʻchiramiz.",
+            },
+            q5: {
+              question: "Maʼlumotlarimiz sotiladimi yoki AI modellarini oʻqitishda ishlatiladimi?",
+              answer: "Yoʻq. Oʻquvchi maʼlumotlari sotilmaydi va ijaraga berilmaydi, ularning ishlari mashinaviy oʻqitish modellarini tayyorlashda ishlatilmaydi. Nimani va nima uchun yigʻishimiz maxfiylik siyosatida yozilgan.",
+            },
+            q6: {
+              question: "Butun maktab uchun biror narsa bormi?",
+              answer: "Erta kirish allaqachon butun maktabni bepul qamrab oladi — har bir oʻqituvchi, har bir sinf. Keng joriy qilayotgan boʻlsangiz, bizga yozing: katta joriy qilishga nima kerakligini taxmin qilgandan koʻra sizdan bilganimiz yaxshi.",
+            },
+          },
+          cta: {
+            title: "Hozir boshlang, hech narsa toʻlamang, keyin qaror qiling.",
+            subtitle: "Hisob yarating, bitta haqiqiy test tuzing va Dwelve haftangizdan joy olishga arziydimi — koʻring.",
+            primary: "Bepul boshlash",
+            secondary: "Bizga yozing",
+          },
+        },
+        about: {
+          eyebrow: "Biz haqimizda",
+          title: "Ishlarni tekshirish oʻqituvchilikning eng uzoq qismi boʻlmasligi kerak.",
+          lead: "Dwelve — maktablar va xususiy oʻquv markazlari uchun akademik test platformasi. U test tuzish, uni oʻtkazish va natijani olish uchta alohida ish emas, balki bir butun jarayon boʻlishi uchun qurilgan.",
+          story: {
+            p1: "Haftalik nazorat ishi oʻqituvchining ikki kechasini oladi: biri — tuzishga, ikkinchisi — tekshirishga. Tuzish oʻqituvchini talab qiladi. Tekshirish esa — koʻpchilik testlar tuzilgan savol turlari uchun — arifmetika. Ayni shu qism oʻquvchi savolni hali eslab turganida unga fikr yetib borishini hal qiladi.",
+            p2: "Shuning uchun Dwelve mexanik yarmini oʻz zimmasiga oladi. Ish varaqasi yoki bobni yuklang — u shular asosida savol qoralamalarini tuzadi; siz har birini oʻqiysiz, notoʻgʻrisini tuzatasiz, keraksizini oʻchirasiz. Sinf ishni topshirganda natijalar allaqachon tayyor — faqat baholar emas, sinfning yarmi qaysi savolda adashganini ham koʻrasiz.",
+            p3: "Dwelve qilmaydigan narsa — siz uchun qaror qabul qilish. Oʻqituvchi oʻqib tasdiqlamagan savol oʻquvchiga yetib bormaydi. Bu kamchilik emas, ataylab qoʻyilgan chegara, va mahsulot shuning atrofida qurilgan.",
+          },
+          principles: {
+            title: "Biz amal qiladigan toʻrtta narsa",
+            subtitle: "Bularning har birini bugun mahsulotda tekshirib koʻrish mumkin — bu sahifa faqat shunday daʼvolarni oʻziga ravo koʻradi.",
+            control: {
+              title: "Har bir savolni oʻqituvchi tasdiqlaydi",
+              body: "Sunʼiy intellekt qoralama tuzadi, lekin hech qachon nashr etmaydi. Har bir qoralama savol koʻrib chiqish bosqichidan oʻtadi — uni tahrirlash, tartibini oʻzgartirish yoki oʻchirish mumkin, va oʻqituvchi ruxsat bermaguncha hech narsa oʻquvchiga yetib bormaydi.",
+            },
+            hardware: {
+              title: "Maktablarda bor texnikaga moʻljallangan",
+              body: "Oʻquvchilar testni oʻzlarida bor qurilmada — telefonda, umumiy noutbukda, sinfdagi kompyuterda — brauzer orqali topshiradi. Oʻrnatadigan ilova ham, minimal talab ham yoʻq: chunki bunga eng koʻp muhtoj maktab kamdan-kam hollarda yangi jihozli maktab boʻladi.",
+            },
+            language: {
+              title: "Uch til, bitta til va tarjimalar emas",
+              body: "Har bir ekran ingliz, rus va oʻzbek tillarida chiqadi — oʻqituvchi uchun ham, oʻquvchi uchun ham. Yetishmayotgan tarjima vazifalar roʻyxatidagi band emas, xato hisoblanadi.",
+            },
+            honesty: {
+              title: "Nima tayyor emasligini aytamiz",
+              body: "Dwelve erta kirishda va bu sayt har bir sahifasida shuni yozib qoʻygan. Narxlar sahifasi bir kun narx paydo boʻlishini ochiq tan oladi, bu sahifa esa nima tayyor va nima tayyor emasligini toʻgʻridan-toʻgʻri aytadi. Biz bajara olmaydigan vaʼda evaziga roʻyxatdan oʻtishni olgandan koʻra, uni yoʻqotganimiz maʼqul.",
+            },
+          },
+          status: {
+            title: "Dwelve bugun qay holatda",
+            p1: "Erta kirish. Oʻqituvchilar unda haqiqiy testlar tuzmoqda va oʻtkazmoqda, qoralama va baholash yoʻllari boshidan oxirigacha ishlaydi, tahlil esa oʻqituvchi testdan keyin haqiqatan beradigan savollarga javob beradi. Mahsulot tugallanmagan — va shunday ekan, buni shu sahifada yozib turamiz.",
+            p2: "Agar siz maktab yoki oʻquv markazini boshqarsangiz va nima buzilayotganini bizga aytishga tayyor boʻlsangiz — hozir mahsulot uchun bundan foydaliroq ish yoʻq. Bu hech narsa turmaydi va keyin nima qilinishini belgilaydi.",
+          },
+          cta: {
+            title: "Bitta haqiqiy testda sinab koʻring.",
+            subtitle: "Namoyish maʼlumotlarida emas — siz baribir tuzmoqchi boʻlgan testda. Bu sizga bir kechani tejaydimi yoʻqmi, faqat shundagina bilinadi.",
+            primary: "Bepul boshlash",
+            secondary: "Bizga yozing",
+          },
+        },
+        contact: {
+          eyebrow: "Aloqa",
+          title: "Tirik odam bilan gaplashing.",
+          lead: "Bu yerda tiketlar navbati ham, chat-bot ham yoʻq. Xatlar Dwelve ustida ishlayotgan odamlarga boradi va ular javob beradi.",
+          channels: {
+            general: {
+              title: "Dwelve haqida savol",
+              body: "Mahsulot qanday ishlashi, u siz oʻqitadigan narsaga mos keladimi va keyin nima chiqishi — hammasi haqida.",
+              action: "Bizga yozing",
+            },
+            schools: {
+              title: "Maktabingiz yoki oʻquv markazingiz",
+              body: "Dwelveni barcha sinflarga joriy qilish, mavjud savollar bankini koʻchirish yoki katta guruhga nima kerakligini aniqlash. Erta kirish butun maktabni bepul qamrab oladi.",
+              action: "Bizga yozing",
+            },
+            bug: {
+              title: "Nimadir buzildi",
+              body: "Bu haqda ilovaning oʻzidan, xato yuz bergan sahifadan xabar bering. Shunda skrinshot va kontekst oʻzi ilova qilinadi — bu har qanday tavsifdan qimmatliroq.",
+              action: "Ilovadan xabar berish",
+            },
+          },
+          include: {
+            title: "Xatga nima yozish kerak",
+            subtitle: "Toʻrtta narsa uch marta aniqlashtirish soʻrashga majbur qiladigan xabarni oʻsha kuniyoq ish boshlash mumkin boʻlgan xabarga aylantiradi.",
+            i1: "Nima qilmoqchi boʻlgansiz — bir gapda.",
+            i2: "Nimani kutgansiz va uning oʻrniga nima boʻldi.",
+            i3: "Qaysi sahifada boʻlgansiz — manzilning oʻzi yetarli.",
+            i4: "Koʻrsatadigan narsa boʻlsa, skrinshot.",
+            response: "Biz siz yozgan tilda javob beramiz — ingliz, rus yoki oʻzbek tilida. Javob odatda ikki ish kuni ichida keladi. Agar xato sinfning test topshirishiga xalaqit berayotgan boʻlsa, buni xat mavzusida yozing — bunday xat birinchi navbatda koʻriladi.",
+          },
+          cta: {
+            title: "Yoki shunchaki sinab koʻring, keyin yozasiz.",
+            subtitle: "Hisob yaratish xat yozishdan tezroq, undan keyin savollaringiz ham aniqroq boʻladi.",
+            primary: "Bepul boshlash",
+            secondary: "Narxlarni koʻrish",
+          },
+        },
+        legal: {
+          eyebrow: "Huquqiy maʼlumot",
+          privacy: {
+            title: "Maxfiylik siyosati",
+            lead: "Dwelve nimani yigʻadi, nima uchun yigʻadi va maktab buning bilan nima qilishimizni soʻrashi mumkin.",
+            updated: "Yangilangan sana: 2026-yil 25-avgust",
+            intro: "Bu siyosat dwelve.uz saytiga va app.dwelve.uz manzilidagi Dwelve ilovasiga taalluqli. U oʻzini himoya qilish uchun emas, oʻqilishi uchun yozilgan. Agar biror joyi tushunarsiz boʻlsa — soʻrang: manzil har bir sahifaning pastida bor.",
+            sections: [
+              {
+                heading: "Biz kimmiz",
+                body: [
+                  "Dwelve — maktablar va xususiy oʻquv markazlari uchun akademik test platformasi. Bu sayt mahsulot haqida soʻzlaydi; mahsulotning oʻzi app.dwelve.uz manzilida ishlaydi.",
+                  "Ushbu siyosat boʻyicha savollar va quyida tavsiflangan har qanday murojaat uchun support@dwelve.app manziliga yozing.",
+                ],
+              },
+              {
+                heading: "Bu sayt nimani yigʻadi",
+                body: [
+                  "dwelve.uz saytida hisoblar ham, shakllar ham, tahlil yoki reklama kuzatuvchilari ham yoʻq. U brauzeringizda bitta narsani saqlaydi: siz tanlagan rang mavzusini — toʻq rejim soʻragan boʻlsangiz, sahifa oq boʻlib yonib ketmasligi uchun.",
+                  "Til — siz oʻqiyotgan manzilning bir qismi, siz haqingizdagi yozuv emas.",
+                ],
+              },
+              {
+                heading: "Ilova nimani yigʻadi",
+                body: [
+                  "Ilova ichida Dwelve testni oʻtkazish uchun zarur boʻlgan maʼlumotni saqlaydi:",
+                ],
+                list: [
+                  "Hisob maʼlumotlari: ism, elektron pochta manzili va rol — administrator, oʻqituvchi yoki oʻquvchi.",
+                  "Maktab va sinfga aʼzolik — test kerakli guruhga yetib borishi uchun.",
+                  "Siz yaratgan narsalar: testlar, savollar, javob kalitlari va savol tuzish uchun yuklangan materiallar.",
+                  "Test jarayoni: yuborilgan javoblar, ballar, sarflangan vaqt va topshirish vaqti.",
+                  "Siz yuborishga qaror qilgan muammo xabarlari, ularga ilova qilingan skrinshot va sahifa manzili bilan.",
+                ],
+              },
+              {
+                heading: "Nima uchun saqlaymiz",
+                body: [
+                  "Yuqoridagi har bir band mahsulot ishlashi uchun kerak: sizni tizimga kiritish, sinfga kerakli testni koʻrsatish, uni baholash va oʻqituvchiga natijani koʻrsatish uchun.",
+                  "Biz reklama profillarini tuzmaymiz va shaxsiy maʼlumotlarni hech kimga oʻz maqsadlari uchun sotmaymiz, ijaraga bermaymiz va uzatmaymiz. Oʻquvchi ishlari mashinaviy oʻqitish modellarini tayyorlashda ishlatilmaydi.",
+                ],
+              },
+              {
+                heading: "AI qoralama tuzganda material qayerga boradi",
+                body: [
+                  "Savol tuzish uchun hujjat yuklaganingizda, uning matni qoralamalarni tayyorlash maqsadida uchinchi tomon AI provayderiga yuboriladi va qoralamalar sizga koʻrib chiqish uchun qaytadi. Provayder matnni bizning topshirigʻimiz boʻyicha, faqat shu vazifa uchun va boshqa hech qanday maqsadda emas qayta ishlaydi.",
+                  "Agar hujjat maxfiy boʻlsa — uni yuklamang. Qoralama tuzish majburiy emas, har qanday savolni qoʻlda yozish mumkin.",
+                ],
+              },
+              {
+                heading: "Qancha vaqt saqlanadi",
+                body: [
+                  "Hisob, sinf va test maʼlumotlari hisob mavjud ekan saqlanadi. Hisob yoki maktab oʻchirilganda maʼlumotlar ishchi tizimdan olib tashlanadi, zaxira nusxalardan esa oʻsha nusxalar muddati tugashi bilan yoʻqoladi.",
+                  "Istalgan vaqtda hisobni va unga bogʻliq hamma narsani oʻchirishni soʻrashingiz mumkin.",
+                ],
+              },
+              {
+                heading: "Oʻquvchilar va ularning maʼlumotlari",
+                body: [
+                  "Oʻquvchilar Dwelvedan ularni qabul qilgan maktab yoki oʻquv markazi orqali foydalanadi. Kimda hisob boʻlishini va u haqda nima yozilishini maktab hal qiladi; biz bu maʼlumotni maktab topshirigʻi boʻyicha qayta ishlaymiz.",
+                  "Farzandi maʼlumoti haqida savoli bor ota-ona yoki vasiy avval maktabga murojaat qilishi kerak — maktab murojaatni bizga yetkazishi mumkin.",
+                ],
+              },
+              {
+                heading: "Nima soʻrashingiz mumkin",
+                body: [
+                  "Mahalliy qonun sizga nimani kafolatlashidan qatʼi nazar, soʻrov boʻyicha har qanday hisob uchun quyidagilarni bajaramiz:",
+                ],
+                list: [
+                  "Siz haqingizda saqlayotgan maʼlumot nusxasini beramiz.",
+                  "Notoʻgʻri koʻrsatilgan narsani tuzatamiz.",
+                  "Hisobni va uning tarkibini oʻchiramiz.",
+                  "Bu siyosatning istalgan bandini oddiy soʻzlar bilan tushuntiramiz.",
+                ],
+              },
+              {
+                heading: "Xavfsizlik",
+                body: [
+                  "Trafik uzatishda shifrlanadi, ishchi maʼlumotlarga esa faqat xizmatni yuritish uchun zarur boʻlgan odamlar kira oladi.",
+                  "Mukammal tizim boʻlmaydi. Maktabingizga taalluqli maʼlumot sizib chiqqanini aniqlasak, nima boʻlgani va nima qilayotganimizni sizga aytamiz.",
+                ],
+              },
+              {
+                heading: "Siyosatdagi oʻzgarishlar",
+                body: [
+                  "Bu siyosat jiddiy oʻzgarganda yuqoridagi sana oʻzgaradi va hisob egalariga xat yuboriladi. Shundan keyin Dwelvedan foydalanishda davom etish yangi tahrirni qabul qilish demakdir.",
+                ],
+              },
+            ],
+          },
+          terms: {
+            title: "Foydalanish shartlari",
+            lead: "Erta kirish davrida Dwelve bilan undan foydalanayotgan maktablar, oʻqituvchilar va oʻquvchilar oʻrtasidagi kelishuv.",
+            updated: "Yangilangan sana: 2026-yil 25-avgust",
+            intro: "Bu shartlar dwelve.uz saytiga va app.dwelve.uz manzilidagi Dwelve ilovasiga taalluqli. Ular qisqa, chunki mahsulot yosh; u ulgʻaygani sari shartlar ham uzayadi. Agar bu yerdagi biror narsa maktabingiz ish tartibiga toʻgʻri kelmasa — taxmin qilmang, bizga yozing.",
+            sections: [
+              {
+                heading: "Dwelve nimani taqdim etadi",
+                body: [
+                  "Dwelve — akademik testlarni tuzish, oʻtkazish va baholash uchun bulutli xizmat. Erta kirish davrida u bepul va ishlash kafolati boʻyicha shartnomasiz taqdim etiladi.",
+                  "Biz oʻzgarishlarni uzluksiz chiqaramiz, shuning uchun imkoniyatlar oʻzgaradi. Mavjud testlaringiz ishlashiga taʼsir qiladigan har qanday oʻzgarish oldindan xat orqali eʼlon qilinadi.",
+                ],
+              },
+              {
+                heading: "Hisoblar",
+                body: [
+                  "Hisob bir kishi uchun moʻljallangan. Parolingizni saqlash va hisobingiz ostida sodir boʻladigan ishlar uchun siz javob berasiz.",
+                  "Maktab va oʻquv markazlari oʻzlari yaratgan hisoblar va kimga oʻqituvchi yoki administrator roli berilgani uchun javob beradi.",
+                ],
+              },
+              {
+                heading: "Kontentingiz sizniki boʻlib qoladi",
+                body: [
+                  "Testlar, savollar, yuklangan materiallar va oʻquvchi natijalari sizga yoki maktabingizga tegishli. Biz ularga daʼvo qilmaymiz.",
+                  "Biz ularni faqat xizmat siz uchun ishlashi uchun saqlaymiz va qayta ishlaymiz. Tafsilotlar maxfiylik siyosatida.",
+                ],
+              },
+              {
+                heading: "Nima qilmaslikka rozilik bildirasiz",
+                body: [
+                  "Dwelvedan foydalanar ekansiz, quyidagilarni qilmaslikka rozilik bildirasiz:",
+                ],
+                list: [
+                  "Foydalanishga huquqingiz yoʻq materiallarni yuklash.",
+                  "Test oʻtkazish uchun zarur boʻlganidan ortiq oʻquvchi maʼlumotini yigʻish.",
+                  "Boshqa maktab maʼlumotlariga kirishga urinish yoki boshqa foydalanuvchilar uchun xizmat ishini buzish.",
+                  "Dwelvega kirishni oʻz mahsulotingiz sifatida qayta sotish.",
+                ],
+              },
+              {
+                heading: "AI tuzgan savollar",
+                body: [
+                  "Qoralama savollar — boshlangʻich nuqta, oʻqimasdan ishonsa boʻladigan javob kaliti emas. Aynan shu sababdan har bir qoralama oʻqituvchi koʻrigidan oʻtadi, va nashr etilgan test mazmuni uchun uni nashr etgan oʻqituvchi javob beradi.",
+                  "Biz tuzilgan savolning aniq, sinf yoshiga mos yoki xatosiz ekanini kafolatlamaymiz.",
+                ],
+              },
+              {
+                heading: "Erta kirish davridagi ishlash",
+                body: [
+                  "Xizmat ishlab turishi uchun, ayniqsa sinflar test topshirayotganda, jon kuydiramiz va imkon boricha rejali ishlar haqida oldindan xabar beramiz.",
+                  "Erta kirishda xizmat darajasi boʻyicha kelishuv yoʻq. Muhim imtihonni zaxira variantsiz Dwelvega rejalashtirmang.",
+                ],
+              },
+              {
+                heading: "Narxlar",
+                body: [
+                  "Erta kirish bepul. Bu oʻzgarsa, avval narxlar sahifasi oʻzgaradi va har bir hisobga kamida 30 kun oldin xat yuboriladi. Siz allaqachon yaratgan hech narsa bunday ogohlantirishsiz ushlab qolinmaydi.",
+                ],
+              },
+              {
+                heading: "Toʻxtatish",
+                body: [
+                  "Siz istalgan vaqtda Dwelvedan foydalanishni toʻxtatib, hisobingiz va uning tarkibini oʻchirishni soʻrashingiz mumkin.",
+                  "Biz bu shartlarni buzadigan yoki boshqa foydalanuvchilar maʼlumotini xavf ostiga qoʻyadigan hisobni toʻxtatib qoʻyishimiz mumkin — va sababini aytamiz.",
+                ],
+              },
+              {
+                heading: "Javobgarlik",
+                body: [
+                  "Erta kirish davrida Dwelve «qanday boʻlsa shundayligicha» taqdim etiladi. Qonun ruxsat bergan darajada biz bilvosita zarar uchun javob bermaymiz — shu jumladan yoʻqotilgan dars vaqti yoki oʻtkazilmay qolgan test oqibatlari uchun.",
+                  "Bu yerdagi hech narsa qonun boʻyicha cheklab boʻlmaydigan javobgarlikni cheklamaydi.",
+                ],
+              },
+              {
+                heading: "Oʻzgarishlar va aloqa",
+                body: [
+                  "Bu shartlar jiddiy oʻzgarganda yuqoridagi sana oʻzgaradi va hisob egalariga xat yuboriladi. Savollar — support@dwelve.app manziliga.",
+                ],
+              },
+            ],
+          },
+        },
         nav: {
+          pricing: "Narxlar",
+          about: "Biz haqimizda",
+          contact: "Aloqa",
+          primary: "Asosiy navigatsiya",
+          openMenu: "Menyuni ochish",
+          closeMenu: "Menyuni yopish",
           aiDrafting: "AI generatsiya",
           features: "Imkoniyatlar",
           howItWorks: "Qanday ishlaydi",
@@ -3195,6 +3540,8 @@ translation: {
           point3: "Birinchi testni bitta tanaffusda tuzib, tekshirib, eʼlon qilsa boʻladi.",
         },
         footer: {
+          company: "Kompaniya",
+          account: "Hisob",
           description: "Maktab testlarini bir necha daqiqada onlayn yarating, ulashing va baholang.",
           about: "Biz haqimizda",
           contact: "Aloqa",

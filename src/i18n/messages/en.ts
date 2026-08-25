@@ -3069,8 +3069,353 @@ translation: {
         comingSoon: "Soon",
         primaryNav: "Primary navigation",
       },
+      seo: {
+        ogImageAlt: "Dwelve online testing platform",
+        offerDescription: "Free during early access",
+        home: {
+          title: "Dwelve | AI-Powered Online Tests for Schools",
+          description: "Create, manage, and grade online tests with AI. Dwelve helps teachers, schools, and learning centers turn educational materials into tests and analyze student performance.",
+        },
+        pricing: {
+          title: "Pricing — Free While Dwelve Is in Early Access",
+          description: "Dwelve is free during early access: unlimited tests and classes, AI drafting from your own materials, instant grading and class analytics. No card, no quote, no sales call.",
+        },
+        about: {
+          title: "About Dwelve — Testing Software Built With Teachers",
+          description: "Why Dwelve exists, the four things it holds to, and exactly where the product is today. Built for schools and learning centers in English, Russian and Uzbek.",
+        },
+        contact: {
+          title: "Contact Dwelve — Schools, Questions and Bug Reports",
+          description: "Reach the people building Dwelve about your school, a question, or something that broke. Real addresses, what to include, and how long a reply takes.",
+        },
+        privacy: {
+          title: "Privacy Policy",
+          description: "What Dwelve collects, why it collects it, how long it is kept, and what a school can ask us to delete. Written to be read.",
+        },
+        terms: {
+          title: "Terms of Service",
+          description: "The terms for using Dwelve during early access: what we provide, what your school is responsible for, and how either side can stop.",
+        },
+      },
       landing: {
+        pricing: {
+          eyebrow: "Pricing",
+          title: "One plan. Free while Dwelve is in early access.",
+          lead: "There is no paid tier yet, no trial timer, and nothing to negotiate. Every teacher and every school gets the whole product — and we will tell you before that changes.",
+          plan: {
+            name: "Early access",
+            price: "Free",
+            period: "for every teacher and every class",
+            description: "The full product, not a sampler. Draft tests from your own materials, review every question, publish to a class, and read the results — with no cap on tests, classes or students.",
+            cta: "Create your account",
+            ctaNote: "No card. No quote. No sales call.",
+            included: {
+              i1: "Unlimited tests, questions, classes and students",
+              i2: "AI drafting from PDFs, worksheets and lesson notes",
+              i3: "Teacher review before anything reaches a student",
+              i4: "Automatic grading and per-class analytics",
+              i5: "A reusable question bank shared across your classes",
+              i6: "Timed exams with fullscreen enforced",
+              i7: "English, Russian and Uzbek, for teachers and students alike",
+            },
+          },
+          note: {
+            title: "What happens when early access ends",
+            p1: "Dwelve will eventually charge schools and learning centers. We would rather say so now than surprise you with it later.",
+            p2: "When pricing is set, it will appear on this page first, and every account will be emailed at least 30 days before anything changes.",
+            p3: "Your tests, questions and results belong to your school. If you decide not to continue, ask us and we will export them for you or delete them.",
+          },
+          faq: {
+            title: "Questions a free plan raises",
+            q1: {
+              question: "Is this really free, or is it a trial?",
+              answer: "It is free, and it is not on a timer. Dwelve is in early access: the product is complete enough to run real tests, and young enough that we would rather have teachers using it than money from them.",
+            },
+            q2: {
+              question: "What are the limits?",
+              answer: "There is no cap on tests, questions, classes or students. The only limits are the ones the product has for everyone — the file size on PDF import, for example — not a lower tier we have put you on.",
+            },
+            q3: {
+              question: "Will you start charging me without warning?",
+              answer: "No. This page changes first, and every account is emailed at least 30 days before pricing changes. Nothing you have already created will be withheld without that notice.",
+            },
+            q4: {
+              question: "What happens to my tests if I stop using Dwelve?",
+              answer: "They stay yours. Ask us and we will export them, or delete them and everything attached to them.",
+            },
+            q5: {
+              question: "Is our data sold, or used to train AI models?",
+              answer: "No. Student data is not sold or rented, and student work is not used to train machine-learning models. What we do collect, and why, is set out in the privacy policy.",
+            },
+            q6: {
+              question: "Is there anything for a whole school?",
+              answer: "Early access already covers a whole school at no cost — every teacher, every class. If you are rolling it out widely, write to us: we would rather learn what a large deployment needs from you than guess.",
+            },
+          },
+          cta: {
+            title: "Start now, pay nothing, decide later.",
+            subtitle: "Create an account, write one real test, and see whether Dwelve earns a place in your week.",
+            primary: "Start for free",
+            secondary: "Talk to us",
+          },
+        },
+        about: {
+          eyebrow: "About",
+          title: "Marking should not be the longest part of teaching.",
+          lead: "Dwelve is an academic testing platform for schools and private learning centers — built so that writing a test, sitting it, and getting it back are one continuous thing instead of three.",
+          story: {
+            p1: "A weekly quiz costs a teacher two evenings: one to write it, one to mark it. The writing is the part that needs a teacher. The marking, for the kinds of questions most tests are made of, is arithmetic — and it is the part that decides whether feedback reaches a student while they still remember the question.",
+            p2: "So Dwelve takes the mechanical half. Upload a worksheet or a chapter and it drafts questions from it; you read every one, fix what is wrong, and delete what is useless. When the class submits, the results are already there — not just the marks, but which question half the room got wrong.",
+            p3: "What it does not do is decide. No question reaches a student that a teacher has not read and approved. That is a deliberate constraint rather than a missing feature, and the product is built around it.",
+          },
+          principles: {
+            title: "Four things we hold to",
+            subtitle: "Each of these can be checked in the product today, which is the only kind of claim this page is willing to make.",
+            control: {
+              title: "Teachers approve every question",
+              body: "AI drafts; it never publishes. Every drafted question passes through a review step where it can be edited, reordered or deleted, and nothing reaches a student until a teacher says so.",
+            },
+            hardware: {
+              title: "Built for the hardware schools have",
+              body: "Students sit tests in a browser, on whatever they own — a phone, a shared laptop, a lab machine. There is no app to install and no minimum spec, because the school that most needs this is rarely the one with new equipment.",
+            },
+            language: {
+              title: "Three languages, not one plus translations",
+              body: "Every screen ships in English, Russian and Uzbek, for teachers and students alike. A missing translation is treated as a bug, not as a backlog item.",
+            },
+            honesty: {
+              title: "We say what is not ready",
+              body: "Dwelve is in early access and the site says so on every page. The pricing page admits there will one day be a price, this page tells you exactly what is and is not finished, and we would rather lose a signup than earn one on a claim we cannot keep.",
+            },
+          },
+          status: {
+            title: "Where Dwelve is today",
+            p1: "Early access. Teachers are writing and running real tests with it, the drafting and grading paths work end to end, and the analytics answer the questions a teacher actually asks after a test. It is not finished, and we will say so on this page for as long as it is true.",
+            p2: "If you run a school or a learning center and you are willing to tell us what breaks, that is the most useful thing anyone can do for the product right now. It costs nothing, and it shapes what gets built next.",
+          },
+          cta: {
+            title: "Try it on one real test.",
+            subtitle: "Not a demo dataset — a test you were going to write anyway. That is the only way to find out whether this saves you an evening.",
+            primary: "Start for free",
+            secondary: "Talk to us",
+          },
+        },
+        contact: {
+          eyebrow: "Contact",
+          title: "Talk to a person.",
+          lead: "There is no ticket queue and no chatbot. Mail reaches the people building Dwelve, and they answer it.",
+          channels: {
+            general: {
+              title: "A question about Dwelve",
+              body: "Anything about how the product works, whether it fits what you teach, or what is coming next.",
+              action: "Write to us",
+            },
+            schools: {
+              title: "Your school or learning center",
+              body: "Rolling Dwelve out across classes, moving an existing question bank in, or working out what a large group needs. Early access covers a whole school at no cost.",
+              action: "Write to us",
+            },
+            bug: {
+              title: "Something is broken",
+              body: "Report it from inside the app, on the page it happened on. That attaches the screenshot and the context automatically, which is worth more than any description.",
+              action: "Report from the app",
+            },
+          },
+          include: {
+            title: "What to put in the message",
+            subtitle: "Four things turn a report we have to ask three questions about into one we can act on the same day.",
+            i1: "What you were trying to do, in one sentence.",
+            i2: "What you expected, and what happened instead.",
+            i3: "The page you were on — the address is enough.",
+            i4: "A screenshot, if there is anything to see.",
+            response: "We answer in the language you write in — English, Russian or Uzbek. Expect a reply within two working days. If a bug is stopping a class from sitting a test, say so in the subject line and it goes to the front.",
+          },
+          cta: {
+            title: "Or just try it, and write to us afterwards.",
+            subtitle: "Creating an account takes less time than writing the email, and you will have better questions once you have.",
+            primary: "Start for free",
+            secondary: "See what it costs",
+          },
+        },
+        legal: {
+          eyebrow: "Legal",
+          privacy: {
+            title: "Privacy Policy",
+            lead: "What Dwelve collects, why it collects it, and what a school can ask us to do with it.",
+            updated: "Last updated 25 August 2026",
+            intro: "This policy covers the Dwelve marketing site at dwelve.uz and the Dwelve application at app.dwelve.uz. It is written to be read rather than to be defensible. If anything in it is unclear, ask — the address is in the footer of every page.",
+            sections: [
+              {
+                heading: "Who we are",
+                body: [
+                  "Dwelve is an academic testing platform for schools and private learning centers. This site explains the product; the product itself runs at app.dwelve.uz.",
+                  "For questions about this policy, or to make any of the requests described below, write to support@dwelve.app.",
+                ],
+              },
+              {
+                heading: "What this site collects",
+                body: [
+                  "This site — dwelve.uz — has no accounts, no forms, and no analytics or advertising trackers. It stores one thing in your browser: the colour theme you chose, so the page does not flash white if you asked for dark.",
+                  "Your language is part of the address you are reading rather than something recorded about you.",
+                ],
+              },
+              {
+                heading: "What the application collects",
+                body: [
+                  "Inside the application, Dwelve holds what running a test requires:",
+                ],
+                list: [
+                  "Account details: name, email address, and role — admin, teacher or student.",
+                  "School and class membership, so that a test reaches the right group.",
+                  "Content you create: tests, questions, answer keys, and any material uploaded in order to draft questions from it.",
+                  "Test activity: the answers submitted, scores, timings and submission times.",
+                  "Problem reports you choose to send, including the screenshot and page address attached to them.",
+                ],
+              },
+              {
+                heading: "Why we hold it",
+                body: [
+                  "Every item above exists to make the product work: to sign you in, to show a class the right test, to grade it, and to show a teacher the result.",
+                  "We do not build advertising profiles, and we do not sell, rent or share personal data with anyone for their own purposes. Student work is not used to train machine-learning models.",
+                ],
+              },
+              {
+                heading: "Where AI drafting sends your material",
+                body: [
+                  "When you upload a document to draft questions from, its text is sent to a third-party AI provider to produce those drafts, and the drafts come back to you for review. The provider processes it on our instruction, to perform that task, and for no other purpose.",
+                  "If a document is sensitive, do not upload it. Drafting is optional, and every question can be written by hand.",
+                ],
+              },
+              {
+                heading: "How long it is kept",
+                body: [
+                  "Account, class and test data is kept while the account exists. When an account or a school is deleted, its data is removed from the live system, and from backups as those backups age out.",
+                  "You can ask us to delete an account and everything attached to it at any time.",
+                ],
+              },
+              {
+                heading: "Students and their data",
+                body: [
+                  "Students use Dwelve through the school or learning center that enrolled them. The school decides who has an account and what is recorded about them; we process that data on the school's instruction.",
+                  "A parent or guardian with a question about their child's data should start with the school, which can pass any request to us.",
+                ],
+              },
+              {
+                heading: "What you can ask for",
+                body: [
+                  "Whatever your local law entitles you to, we will do the following on request, for any account:",
+                ],
+                list: [
+                  "Give you a copy of what we hold about you.",
+                  "Correct anything that is inaccurate.",
+                  "Delete an account and its content.",
+                  "Explain anything in this policy in plain language.",
+                ],
+              },
+              {
+                heading: "Security",
+                body: [
+                  "Traffic is encrypted in transit, and access to production data is limited to the people who need it to run the service.",
+                  "No system is perfect. If we discover a breach affecting your school, we will tell you what happened and what we are doing about it.",
+                ],
+              },
+              {
+                heading: "Changes to this policy",
+                body: [
+                  "When this policy changes materially, the date at the top changes and account holders are emailed. Continuing to use Dwelve after that means the new version applies.",
+                ],
+              },
+            ],
+          },
+          terms: {
+            title: "Terms of Service",
+            lead: "The agreement between Dwelve and the schools, teachers and students using it during early access.",
+            updated: "Last updated 25 August 2026",
+            intro: "These terms apply to dwelve.uz and to the Dwelve application at app.dwelve.uz. They are short because the product is young, and they will get longer as it stops being. If something here does not fit how your school works, write to us rather than assuming.",
+            sections: [
+              {
+                heading: "What Dwelve provides",
+                body: [
+                  "Dwelve is a hosted service for creating, delivering and grading academic tests. During early access it is provided free of charge and without a contractual uptime guarantee.",
+                  "We ship continuously, so features change. Anything that would alter how your existing tests behave is announced by email before it lands.",
+                ],
+              },
+              {
+                heading: "Accounts",
+                body: [
+                  "An account is for one person. You are responsible for keeping your password to yourself and for what happens under your account.",
+                  "Schools and learning centers are responsible for the accounts they create, and for who they give teacher or admin roles to.",
+                ],
+              },
+              {
+                heading: "Your content stays yours",
+                body: [
+                  "Tests, questions, uploaded material and student results belong to you or to your school. We claim no ownership of them.",
+                  "We hold and process them only in order to run the service for you. The privacy policy sets out the detail.",
+                ],
+              },
+              {
+                heading: "What you agree not to do",
+                body: [
+                  "While using Dwelve, you agree not to:",
+                ],
+                list: [
+                  "Upload material you do not have the right to use.",
+                  "Collect data about students beyond what running a test requires.",
+                  "Attempt to reach another school's data, or to disrupt the service for other users.",
+                  "Resell access to Dwelve as your own product.",
+                ],
+              },
+              {
+                heading: "AI-drafted questions",
+                body: [
+                  "Drafted questions are a starting point, not an answer key to be trusted unread. Every draft passes through a teacher review step for exactly this reason, and the teacher who publishes a test is responsible for its content.",
+                  "We make no warranty that a drafted question is accurate, appropriate for a year group, or free of error.",
+                ],
+              },
+              {
+                heading: "Availability during early access",
+                body: [
+                  "We work hard to keep the service up, particularly while classes are sitting tests, and we give notice of planned maintenance where we can.",
+                  "Early access carries no service-level agreement. Do not schedule a high-stakes examination on Dwelve without a fallback.",
+                ],
+              },
+              {
+                heading: "Pricing",
+                body: [
+                  "Early access is free. If that changes, the pricing page changes first and every account is emailed at least 30 days beforehand. Nothing you have already created will be withheld without that notice.",
+                ],
+              },
+              {
+                heading: "Ending it",
+                body: [
+                  "You can stop using Dwelve at any time, and ask us to delete your account and its content.",
+                  "We may suspend an account that breaks these terms or that puts other users' data at risk, and we will say why.",
+                ],
+              },
+              {
+                heading: "Liability",
+                body: [
+                  "Dwelve is provided as-is during early access. To the extent the law allows, we are not liable for indirect or consequential loss — including lost teaching time, or the consequences of a test that could not be sat.",
+                  "Nothing here limits liability that cannot be limited by law.",
+                ],
+              },
+              {
+                heading: "Changes and contact",
+                body: [
+                  "When these terms change materially, the date at the top changes and account holders are emailed. Questions go to support@dwelve.app.",
+                ],
+              },
+            ],
+          },
+        },
         nav: {
+          pricing: "Pricing",
+          about: "About",
+          contact: "Contact",
+          primary: "Main navigation",
+          openMenu: "Open menu",
+          closeMenu: "Close menu",
           aiDrafting: "AI drafting",
           features: "Features",
           howItWorks: "How it works",
@@ -3259,6 +3604,8 @@ translation: {
           point3: "Your first test can be written, reviewed and live in a single free period.",
         },
         footer: {
+          company: "Company",
+          account: "Account",
           description: "Create, share, and grade school tests online in minutes with instant analytics.",
           about: "About",
           contact: "Contact",

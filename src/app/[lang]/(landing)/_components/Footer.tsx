@@ -6,10 +6,10 @@ import { useTranslation } from "react-i18next";
 import { Mail } from "lucide-react";
 
 import DwelveLogo from "@/components/Custom/DwelveLogo";
-import { BRAND_NAME } from "@/constants/brand";
+import LanguageSwitcher from "@/components/Custom/LanguageSwitcher";
+import LocaleLink from "@/components/Custom/LocaleLink";
+import { BRAND_NAME, SUPPORT_EMAIL } from "@/constants/brand";
 import { appHref } from "@/lib/hosts";
-
-const SUPPORT_EMAIL = "support@dwelve.app";
 
 /**
  * The site footer.
@@ -20,18 +20,19 @@ const SUPPORT_EMAIL = "support@dwelve.app";
  * document without ending the argument, and it leaves someone who scrolled all
  * the way down with nowhere to go but back up.
  *
- * This one is a map. A brand column that says what Dwelve is and hands over a
- * real way to reach a human, then the page's own sections as columns, so the
- * footer is the second navigation for anyone who reached the bottom without
- * finding what they came for.
- *
- * **Every destination here exists.** The catalog also offers `pricing`,
- * `helpCenter`, `teacherDashboard` and `studentAccess`; those have no routes
- * yet, and a footer link to a 404 is worse than an absent one, so they stay
- * unrendered until the pages are real.
+ * This one is a map, and now it is a map of a site rather than of a page. The
+ * Product column still points at the home page's own sections; Company and Legal
+ * point at real routes. **Every destination here exists** — a footer link to a
+ * 404 is worse than an absent one, which is why `pricing`, `privacy` and `terms`
+ * spent a release as `mailto:` links and only became links when the pages did.
  */
 
-type FooterLink = { key: string; href: string; external?: boolean };
+type FooterLink = {
+  key: string;
+  href: string;
+  /** The href is already final — an app URL or a mail address. Skips `LocaleLink`. */
+  raw?: boolean;
+};
 
 const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
@@ -40,35 +41,28 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       // Nav keys throughout, not the `footer.*` twins: `footer.howItWorks` is
       // title case ("How It Works") while every other label on this page is
       // sentence case, and a column that mixes the two reads as a typo.
-      { key: "landing.nav.aiDrafting", href: "#ai-generation" },
-      { key: "landing.nav.features", href: "#features" },
-      { key: "landing.nav.howItWorks", href: "#how-it-works" },
-      { key: "landing.nav.analytics", href: "#analytics" },
+      { key: "landing.nav.aiDrafting", href: "/#ai-generation" },
+      { key: "landing.nav.features", href: "/#features" },
+      { key: "landing.nav.howItWorks", href: "/#how-it-works" },
+      { key: "landing.nav.analytics", href: "/#analytics" },
+      { key: "landing.nav.accordion", href: "/#accordion" },
     ],
   },
   {
-    title: "landing.footer.quickLinks",
+    title: "landing.footer.company",
     links: [
-      { key: "landing.footer.home", href: "#home" },
-      { key: "landing.nav.accordion", href: "#accordion" },
-      { key: "landing.nav.login", href: appHref("/login") },
-      { key: "landing.nav.signup", href: appHref("/signup") },
+      { key: "landing.nav.pricing", href: "/pricing" },
+      { key: "landing.nav.about", href: "/about" },
+      { key: "landing.nav.contact", href: "/contact" },
     ],
   },
   {
-    title: "landing.footer.support",
+    title: "landing.footer.account",
     links: [
-      { key: "landing.footer.contact", href: `mailto:${SUPPORT_EMAIL}`, external: true },
-      {
-        key: "landing.footer.privacy",
-        href: `mailto:${SUPPORT_EMAIL}?subject=Privacy`,
-        external: true,
-      },
-      {
-        key: "landing.footer.terms",
-        href: `mailto:${SUPPORT_EMAIL}?subject=Terms`,
-        external: true,
-      },
+      { key: "landing.nav.login", href: appHref("/login"), raw: true },
+      { key: "landing.nav.signup", href: appHref("/signup"), raw: true },
+      { key: "landing.footer.privacy", href: "/privacy" },
+      { key: "landing.footer.terms", href: "/terms" },
     ],
   },
 ];
@@ -83,18 +77,18 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-border bg-background">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
-        {/* Brand column, then the page's own map. The brand column takes the
-            wider track because it carries prose; the link columns are lists and
-            want to stay narrow enough to scan in one glance. */}
+        {/* Brand column, then the site's map. The brand column takes the wider
+            track because it carries prose; the link columns are lists and want to
+            stay narrow enough to scan in one glance. */}
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_repeat(3,minmax(0,1fr))] lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link
+            <LocaleLink
               href="/"
               aria-label={t("landing.footer.home")}
               className="inline-flex w-fit rounded-md outline-none transition-opacity hover:opacity-75 focus-visible:ring-2 focus-visible:ring-ring/60"
             >
               <DwelveLogo variant="form" />
-            </Link>
+            </LocaleLink>
 
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
               {t("landing.footer.description")}
@@ -110,6 +104,13 @@ export default function Footer() {
               <Mail aria-hidden className="size-4" />
               {SUPPORT_EMAIL}
             </a>
+
+            {/* The switcher is in the bar too. It is repeated here because the
+                footer is where a reader who has finished the page looks for the
+                site's own controls, and on a phone the bar is a scroll away. */}
+            <div className="mt-6">
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {COLUMNS.map((column) => (
@@ -118,14 +119,14 @@ export default function Footer() {
               <ul className="mt-4 space-y-3">
                 {column.links.map((link) => (
                   <li key={link.key}>
-                    {link.external ? (
-                      <a href={link.href} className={LINK_CLASS}>
-                        {t(link.key)}
-                      </a>
-                    ) : (
+                    {link.raw ? (
                       <Link href={link.href} className={LINK_CLASS}>
                         {t(link.key)}
                       </Link>
+                    ) : (
+                      <LocaleLink href={link.href} className={LINK_CLASS}>
+                        {t(link.key)}
+                      </LocaleLink>
                     )}
                   </li>
                 ))}

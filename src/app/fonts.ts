@@ -1,13 +1,4 @@
-import type { Metadata } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Mono, IBM_Plex_Serif, Manrope } from "next/font/google";
-import "./globals.css";
-import "react-toastify/dist/ReactToastify.css";
-import "@/components/ui/toast.css";
-import Providers from "./providers";
-import Toaster from "@/components/ui/toaster";
-import { BRAND_NAME } from "@/constants/brand";
-import { HOME_DESCRIPTION, HOME_TITLE, SITE_URL } from "@/lib/seo";
-import { cn } from "@/lib/utils";
 
 /*
  * One family, three voices — IBM Plex.
@@ -33,6 +24,11 @@ import { cn } from "@/lib/utils";
  *            per digit is harder to scan and easier to misread.
  *   Serif  — the auth panel headline and controlled marketing display, the one place the page is
  *            addressing a person rather than presenting data.
+ *
+ * These live in their own module rather than in the root layout because
+ * `global-not-found.tsx` renders its own `<html>` outside every layout and needs
+ * the same faces; two `next/font` declarations of the same family would ship two
+ * preloads and two sets of CSS variables.
  */
 const dwelveSans = IBM_Plex_Sans({
   subsets: ["latin", "latin-ext", "cyrillic"],
@@ -72,54 +68,10 @@ const dwelveWordmark = Manrope({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  applicationName: BRAND_NAME,
-  title: {
-    default: HOME_TITLE,
-    template: `%s | ${BRAND_NAME}`,
-  },
-  description: HOME_DESCRIPTION,
-  category: "education",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  icons: {
-    icon: [
-      { url: "/logo/favicon/favicon.svg", type: "image/svg+xml" },
-      { url: "/logo/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/logo/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-    ],
-    apple: "/logo/app-icons/apple-touch-icon.png",
-  },
-};
-
-export default function MainLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn(
-        "font-sans",
-        dwelveSans.variable,
-        dwelveMono.variable,
-        dwelveSerif.variable,
-        dwelveWordmark.variable,
-      )}
-    >
-      <body className="min-h-screen bg-background text-foreground antialiased">
-        {/* Toaster lives inside Providers so it can read the resolved theme. */}
-        <Providers>
-          {children}
-          <Toaster />
-        </Providers>
-      </body>
-    </html>
-  );
-}
+/** The class list every `<html>` in the app carries. */
+export const FONT_VARIABLES = [
+  dwelveSans.variable,
+  dwelveMono.variable,
+  dwelveSerif.variable,
+  dwelveWordmark.variable,
+] as const;

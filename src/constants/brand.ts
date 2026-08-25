@@ -1,3 +1,13 @@
+/**
+ * The one published address for reaching a human at Dwelve.
+ *
+ * It lived as a private const inside `Footer.tsx` while the footer was the only
+ * place it appeared. The contact page, the legal pages and the support column
+ * all need the same address, and three copies of an email address is three
+ * places to miss when it changes.
+ */
+export const SUPPORT_EMAIL = "support@dwelve.app" as const;
+
 /** Canonical product name — import this everywhere instead of using the raw string. */
 export const BRAND_NAME = "Dwelve" as const;
 

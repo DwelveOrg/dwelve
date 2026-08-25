@@ -14,6 +14,12 @@ import { appHref } from "@/lib/hosts";
 // The CSS glow behind it stays visible while it loads and if WebGL is missing.
 const HeroScene = dynamic(() => import("../_components/HeroScene"), { ssr: false });
 
+// The section's ground — a lattice of answer bubbles being marked by a passing
+// band of light. Same deal: its own chunk, never blocks paint, and the page's
+// flat `--background` is the fallback if it never arrives. See `HeroField` for
+// why the hero has a backdrop again at all.
+const HeroField = dynamic(() => import("../_components/HeroField"), { ssr: false });
+
 // Avatar tints come from the chart ramp, not raw Tailwind hues. The four-hue rainbow that used to
 // live here (and, verbatim, in the login and signup panels) was the loudest violation of the
 // one-palette rule and would have clashed with any brand change.
@@ -36,7 +42,12 @@ function MainPage() {
   });
 
   return (
-    <section id="home" className="w-full scroll-mt-24 px-4 pb-12 pt-14 md:pt-20">
+    <section id="home" className="relative isolate w-full scroll-mt-24 px-4 pb-12 pt-14 md:pt-20">
+      {/* The field is full-bleed and behind everything, including the marquee —
+          it is the section's ground, not a panel inside it. `isolate` on the
+          section keeps its z-index local so it can never rise over the navbar. */}
+      <HeroField className="pointer-events-none absolute inset-0 -z-10 h-full w-full" />
+
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-2">
         {/* Left: copy */}
         <motion.div className="flex flex-col items-start text-left" {...fade(0)}>

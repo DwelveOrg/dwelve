@@ -9,6 +9,8 @@ not permanent memory.
 ### Decisions
 
 - [[Marketing application split]] — why this repository owns only public/indexable routes
+- [[Localized url routing]] — why every route lives under `[lang]` and English is unprefixed
+- [[Hero backdrop is product metaphor]] — the one backdrop the anti-decoration rule permits, and its measured limits
 
 ### Discoveries
 
@@ -17,6 +19,8 @@ not permanent memory.
 ### Gotchas
 
 - [[Indexable route registration]] — the files that must agree for a new public route
+- [[Uzbek okina renders wide]] — U+02BB is wide in IBM Plex Sans; it is not a missing glyph
+- [[Not found under a dynamic root]] — why the 404 needs `global-not-found.tsx`, and how it fails silently
 
 ## Maintenance
 
