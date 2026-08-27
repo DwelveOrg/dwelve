@@ -84,6 +84,14 @@
      alias for the middle of the ramp, not the source the ramp derives from. */
   --radius: var(--r-3);
 
+  /* The height of the sticky marketing header, as a token rather than a number
+     copied into two places. It exists because the landing hero is a full
+     viewport *scene* — `min-h-[calc(100svh-var(--header-h))]` — and a hero that
+     subtracts a guessed header height is a hero that is 4px too tall on the day
+     someone changes the bar's padding. `Navbar` applies it as a `min-h` on its
+     own row, so the token is what *sets* the height, not a note about it. */
+  --header-h: 4.75rem;
+
   /* --- Brand === action. One hue, one token pair. ------------------------ */
   --brand: #5F40D5;
   --brand-ink: #14102E;
@@ -1388,6 +1396,363 @@
   background-size: 100% 2.125rem;
   -webkit-mask-image: radial-gradient(76% 82% at 50% 46%, #000 0%, #000 32%, transparent 100%);
   mask-image: radial-gradient(76% 82% at 50% 46%, #000 0%, #000 32%, transparent 100%);
+}
+
+/* Light over the ruled sheet — the hero field's passing band, closing the page.
+
+   A soft diagonal wash, 45% of the band wide, that crosses the slab and then
+   rests: the travel takes ~7 of the 22 seconds and the hold is the rest, so
+   the band spends most of its life still. White at 4% peak over a slab whose
+   copy is measured at ~12:1, so the pass never threatens the text. The
+   gradient reaches zero inside its own box and only `transform` animates. */
+.cta-sheen {
+  position: absolute;
+  inset: 0 auto;
+  left: 0;
+  width: 45%;
+  background-image: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgb(255 255 255 / 0.025) 35%,
+    rgb(255 255 255 / 0.04) 50%,
+    rgb(255 255 255 / 0.025) 65%,
+    transparent 100%
+  );
+  transform: translateX(-110%);
+  animation: cta-sheen-pass 22s linear infinite;
+  will-change: transform;
+}
+
+@keyframes cta-sheen-pass {
+  0% {
+    transform: translateX(-110%);
+  }
+  32% {
+    transform: translateX(340%);
+  }
+  100% {
+    transform: translateX(340%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-sheen {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Section sheets — the ambient layer of the landing page's middle.
+
+   The hero has `HeroField` and the page ends on `.cta-band`; between them sat
+   eight sections on flat ground. These classes give the three *muted bands*
+   (teacher control, roles, analytics) a quiet ambient layer each, so the page
+   breathes on a two-section rhythm: scene, ground, sheet, ground, sheet …
+
+   The rule that governs all of them is the one `HeroField` had to answer: a
+   backdrop must depict the product's own object or it must not exist. Every
+   layer here is the paper the product is about — ruling, graph grid, marks,
+   and light passing over a sheet — in the same vocabulary the auth panel,
+   `.cta-rules` and the app shell already speak. No auroras, no mesh
+   gradients, no orbs.
+
+   Budget rules, inherited from `.shell-backdrop` and `HeroField`:
+   - Only `transform` and `opacity` ever animate; patterns rasterise once.
+   - Soft edges are gradients that reach zero inside their own box — nothing
+     blurs, nothing gets clipped into a rectangle.
+   - Ink ceilings match the measured precedents: ruling ≤5.5% foreground
+     (7% dark), brand washes peak ≤6% light / 9% dark — under the ~9% at
+     which `--muted-foreground` was still measured at 5.1:1.
+   - Reduced motion keeps the paper and parks or removes the light; the still
+     canvas is the fallback, not a blank one.
+
+   Usage: the section gets `relative isolate`; the backdrop is an `aria-hidden`
+   absolutely-positioned `-z-10` child (negative z paints above the section's
+   own background but under all content). `SectionBackdrop.tsx` owns the markup.
+   ------------------------------------------------------------------------- */
+
+.sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sheet-backdrop > * {
+  position: absolute;
+  inset: 0;
+}
+
+/* Ruled, horizontals over faint verticals — a page, not graph paper. Same
+   geometry as `.shell-backdrop-rules`, restated here so the landing sheet and
+   the app-era shell can retune independently. Masked to die before the band's
+   own `border-y`, so the ruling never collides with a real hairline. */
+.sheet-rules {
+  background-image:
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--foreground) 5.5%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--foreground) 3%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 30px 30px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  /* One cell over 90s, so the loop is seamless and the drift is below the
+     threshold where the eye registers movement: never seen moving, only never
+     quite where you left it. */
+  animation: sheet-rules-drift 90s linear infinite;
+}
+
+.dark .sheet-rules {
+  background-image:
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--foreground) 7%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--foreground) 4%, transparent) 1px,
+      transparent 1px
+    );
+}
+
+/* The roles band keeps its ruling quieter — the motes are its figure. */
+.sheet-rules[data-weight="faint"] {
+  opacity: 0.6;
+}
+
+@keyframes sheet-rules-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-30px, -30px, 0);
+  }
+}
+
+/* The review pass: a soft band of brand light reading down the ruled sheet,
+   the way the teacher-control mock's cursor reads down the options. The
+   gradient reaches zero inside its own box; `translateY` percentages are of
+   the band's own height (34% of the section), so -100% starts it fully above
+   and 320% carries it fully below. The hold from 62% to 100% is the quiet
+   beat between passes — a metronome sweep would be a loading bar. */
+.sheet-scan {
+  inset: auto 0;
+  top: 0;
+  height: 34%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--brand) 4%, transparent) 32%,
+    color-mix(in srgb, var(--brand) 8%, transparent) 50%,
+    color-mix(in srgb, var(--brand) 4%, transparent) 68%,
+    transparent 100%
+  );
+  transform: translateY(-100%);
+  animation: sheet-scan-pass 26s linear infinite;
+  will-change: transform;
+}
+
+.dark .sheet-scan {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--brand) 4.5%, transparent) 32%,
+    color-mix(in srgb, var(--brand) 9%, transparent) 50%,
+    color-mix(in srgb, var(--brand) 4.5%, transparent) 68%,
+    transparent 100%
+  );
+}
+
+@keyframes sheet-scan-pass {
+  0% {
+    transform: translateY(-100%);
+  }
+  62% {
+    transform: translateY(320%);
+  }
+  100% {
+    transform: translateY(320%);
+  }
+}
+
+/* Answer sheets in flight.
+
+   The figure for the roles band: miniature OMR sheets — outline, four option
+   rows, one bubble marked — rising slowly through the band the way work moves
+   through the three roles below. Mid-flight, each sheet is *graded*: a green
+   check draws itself across the page and rides the rest of the way up. It is
+   the product's whole loop (submitted → marked) told by the background at a
+   whisper, and it is the one place the ambient layer is allowed a second hue,
+   because the green is the product's own "graded" state, not decoration.
+
+   These are line drawings, not washes, so their strokes carry more ink than
+   the ruling ceilings (which govern light *under text*): the figures live in
+   the band's gutters and open strips, thin enough that even where copy
+   crosses one, it is a 1.5px hairline under bold display text.
+
+   Placement, size, duration and phase come in per-sheet custom properties
+   from `SectionBackdrop` — deterministic, so server and client agree, and the
+   three never travel as a group. Only transform, opacity and dash-offset
+   animate; the SVG rasterises once. */
+.sheet-flyers svg {
+  position: absolute;
+  left: var(--flyer-x);
+  top: var(--flyer-top, 76%);
+  width: var(--flyer-w);
+  height: auto;
+  overflow: visible;
+  color: color-mix(in srgb, var(--brand) 30%, transparent);
+  opacity: 0;
+  animation: sheet-flyer-rise var(--flyer-dur) linear infinite;
+  animation-delay: var(--flyer-delay);
+  will-change: transform, opacity;
+}
+
+.dark .sheet-flyers svg {
+  color: color-mix(in srgb, var(--brand) 40%, transparent);
+}
+
+@keyframes sheet-flyer-rise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(var(--flyer-tilt, -3deg));
+  }
+  12% {
+    opacity: 0.75;
+  }
+  55% {
+    opacity: 0.65;
+  }
+  88% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--flyer-drift, 18px), -215px, 0) rotate(var(--flyer-tilt-end, 3deg));
+  }
+}
+
+/* The grading beat: the check draws across the sheet mid-rise and stays. Its
+   timeline is the same duration and phase as the rise, so the two stay in
+   step; the dash pair matches the path's measured length. */
+.sheet-flyers .flyer-check {
+  stroke: color-mix(in srgb, var(--success) 55%, transparent);
+  stroke-dasharray: 56;
+  stroke-dashoffset: 56;
+  animation: sheet-flyer-check var(--flyer-dur) linear infinite;
+  animation-delay: var(--flyer-delay);
+}
+
+.dark .sheet-flyers .flyer-check {
+  stroke: color-mix(in srgb, var(--success) 65%, transparent);
+}
+
+@keyframes sheet-flyer-check {
+  0%,
+  38% {
+    stroke-dashoffset: 56;
+  }
+  50%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Graph paper: both axes near-even, because the analytics band is the one
+   place the sheet is an instrument rather than a page. Masked radially from
+   the lower middle — dense where the panel sits, gone before the copy at the
+   top and the band's own borders. Drifts a cell over 120s, slower than the
+   ruling: instruments hold steadier than pages. */
+.sheet-grid {
+  background-image:
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--foreground) 5%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--foreground) 4.5%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 30px 30px;
+  -webkit-mask-image: radial-gradient(120% 105% at 50% 78%, #000 0%, #000 38%, transparent 92%);
+  mask-image: radial-gradient(120% 105% at 50% 78%, #000 0%, #000 38%, transparent 92%);
+  animation: sheet-rules-drift 120s linear infinite;
+}
+
+.dark .sheet-grid {
+  background-image:
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--foreground) 6.5%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--foreground) 5.5%, transparent) 1px,
+      transparent 1px
+    );
+}
+
+/* The distribution curve the graph paper is for — drawn by `SectionBackdrop`'s
+   SVG, echoing the histogram in the panel above it. Stroke only; the area
+   under a decorative curve filled in would be a wash, and washes are what got
+   deleted. */
+.sheet-curve {
+  inset: auto 0 0;
+  /* A shallow ribbon in the band's bottom padding — the one strip of the band
+     nothing else occupies. Two positions were tried and measured off
+     screenshots first: confined to the band's lower half, the opaque panel
+     left only a corner squiggle; stretched over the full band, the crest
+     vanished into the bullet text at any alpha low enough to sit under text.
+     Below the panel the whole silhouette is visible at full width, directly
+     under the histogram it mirrors — which is also why it can afford more
+     ink than the ruling: it shares this strip with nothing.
+
+     `width: 100%` is load-bearing: an absolutely-positioned SVG is a replaced
+     element, so `left: 0; right: 0` alone does not stretch it — with only a
+     height it sizes to the viewBox ratio (~257px) and parks at the left edge. */
+  width: 100%;
+  height: 5.5rem;
+  color: color-mix(in srgb, var(--chart-1) 28%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 96%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 96%, transparent 100%);
+}
+
+.dark .sheet-curve {
+  color: color-mix(in srgb, var(--chart-1) 36%, transparent);
+}
+
+/* Reduced motion: the paper stays, the light goes. A parked scan band would
+   read as a printed stripe, so it is removed rather than frozen; the sheets
+   rest faint and still where they are, already graded. */
+@media (prefers-reduced-motion: reduce) {
+  .sheet-rules,
+  .sheet-grid {
+    animation: none;
+  }
+
+  .sheet-scan {
+    display: none;
+  }
+
+  .sheet-flyers svg {
+    animation: none;
+    opacity: 0.3;
+  }
+
+  .sheet-flyers .flyer-check {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
 }
 
 .exam-result-bg {

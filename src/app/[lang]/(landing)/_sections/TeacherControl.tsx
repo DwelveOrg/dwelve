@@ -6,6 +6,7 @@ import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { Pencil, Trash2, Check } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import SectionBackdrop from "../_components/SectionBackdrop";
 import SectionHeading from "../_components/SectionHeading";
 import FeatureBullets from "../_components/FeatureBullets";
 import { useMockSequence } from "../_hooks/useMockSequence";
@@ -35,8 +36,11 @@ export default function TeacherControl() {
   return (
     <section
       id="teacher-control"
-      className="w-full scroll-mt-24 border-y border-border/70 bg-muted/45 py-24 md:py-32"
+      className="relative isolate w-full scroll-mt-24 border-y border-border/70 bg-muted/45 py-24 md:py-32"
     >
+      {/* The sheet under the band: ruled paper being read by a slow pass of
+          light — the ambient version of the review the mock acts out. */}
+      <SectionBackdrop variant="review" />
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-4 lg:grid-cols-2 [&>*]:min-w-0">
         <motion.div
           className="order-2 min-w-0 lg:order-1"

@@ -96,6 +96,10 @@ export default function ClosingCta({
       >
         {/* Ruled paper, masked so it dies before every edge. */}
         <div aria-hidden="true" className="cta-rules pointer-events-none absolute inset-0" />
+        {/* The hero field's passing band of light, crossing the sheet one last
+            time. It travels, rests for most of its loop, and never exceeds 4%
+            white over a slab whose copy sits at ~12:1. */}
+        <div aria-hidden="true" className="cta-sheen pointer-events-none" />
 
         <div
           className={cn(
