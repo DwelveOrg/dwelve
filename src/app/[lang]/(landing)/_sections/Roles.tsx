@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { motion, useReducedMotion } from "motion/react";
 import { Building2, GraduationCap, Smartphone, type LucideIcon } from "lucide-react";
 
+import SectionBackdrop from "../_components/SectionBackdrop";
 import SectionHeading from "../_components/SectionHeading";
 import { surfaceVariants } from "@/components/ui/Surface";
 import { cn } from "@/lib/utils";
@@ -52,8 +53,12 @@ export default function Roles() {
   return (
     <section
       id="roles"
-      className="w-full scroll-mt-24 border-y border-border/70 bg-muted/45 py-20 md:py-24"
+      className="relative isolate w-full scroll-mt-24 border-y border-border/70 bg-muted/45 py-20 md:py-24"
     >
+      {/* The sheet under the band: faint ruling with miniature answer sheets
+          rising through it, each graded mid-flight — the product's own loop
+          moving between the three roles below. */}
+      <SectionBackdrop variant="flow" />
       <div className="mx-auto w-full max-w-6xl px-4">
         <SectionHeading
           title={t("landing.roles.title")}

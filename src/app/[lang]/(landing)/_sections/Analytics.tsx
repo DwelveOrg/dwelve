@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { motion, useReducedMotion } from "motion/react";
 import { TrendingUp } from "lucide-react";
 
+import SectionBackdrop from "../_components/SectionBackdrop";
 import SectionHeading from "../_components/SectionHeading";
 import FeatureBullets from "../_components/FeatureBullets";
 import Surface from "@/components/ui/Surface";
@@ -52,8 +53,11 @@ export default function Analytics() {
   return (
     <section
       id="analytics"
-      className="w-full scroll-mt-24 border-y border-border/70 bg-muted/45 py-24 md:py-32"
+      className="relative isolate w-full scroll-mt-24 border-y border-border/70 bg-muted/45 py-24 md:py-32"
     >
+      {/* The sheet under the band: graph paper, and the distribution curve the
+          section argues from drawing itself in as the panel's bars rise. */}
+      <SectionBackdrop variant="measure" />
       <div className="mx-auto w-full max-w-6xl px-4">
         {/* Copy band: heading and evidence sit side by side, not opposite a mock. */}
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-end lg:gap-16">

@@ -12,6 +12,7 @@ not permanent memory.
 - [[Localized url routing]] — why every route lives under `[lang]` and English is unprefixed
 - [[Hero backdrop is product metaphor]] — the one backdrop the anti-decoration rule permits, and its measured limits
 - [[Hero is a full viewport scene]] — what the entry-scene rebuild took from the reference site, and what it refused
+- [[Section sheets are the ambient layer]] — the muted bands carry product-figure backdrops; flats stay bare ground
 
 ### Discoveries
 
@@ -25,6 +26,7 @@ not permanent memory.
 - [[I18n instance per language]] — never `changeLanguage()` during render, and never share one instance across server requests
 - [[Tailwind calc needs spaced operators]] — `calc(100svh-var(...))` is not a subtraction, and it fails silently
 - [[Headless capture misses late animation]] — `--virtual-time-budget` does not buy real time; the pane never animates at all
+- [[Svg backdrop sizing and pathlength]] — inset alone does not size an absolute svg, and `pathLength` breaks under non-scaling-stroke
 
 ## Maintenance
 

@@ -54,9 +54,10 @@ its own row, so the token *sets* the header height instead of describing it.
 
 `HeroField` is a full-bleed WebGL layer behind the scene: a lattice of answer
 bubbles crossed by a slow band of light that brightens and fills the ones it
-passes. It is the one place the landing page has an ambient background, and the
-reason it is allowed to exist is that it depicts the product's own object rather
-than being atmosphere — see the file's header for the full argument, and for the
+passes. It is the loudest of the page's ambient layers (the "Section sheets"
+below carry the rest), and the reason it is allowed to exist is that it depicts
+the product's own object rather than being atmosphere — see the file's header
+for the full argument, and for the
 measured contrast numbers that keep it off the headline. Re-measure if the focus
 point or mask falloff changes. Its focus is expressed in normalised UV with an
 aspect-corrected falloff, so giving the scene a taller box moves no pixel of it
@@ -95,6 +96,37 @@ Two devices carry it:
 Under reduced motion every beat collapses to an opacity fade at zero delay and
 the mark is painted already drawn — it is the page's only visual claim about
 grading above the fold, so it is not dropped.
+
+## Section sheets
+
+Between the hero and the closing band the page breathes on a two-section
+rhythm: flat ground, then a muted `border-y bg-muted/45` band. Each band
+carries a quiet ambient layer — `SectionBackdrop` in `_components`, styles
+under "Section sheets" in `globals.css` — that answers the same constraint
+`HeroField` did: a backdrop must depict the product's own object or it must
+not exist. No auroras, mesh gradients, or orbs.
+
+- **Teacher control — `review`.** Ruled paper, and a slow band of brand light
+  reading down it the way the mock's cursor reads the options.
+- **Roles — `flow`.** Faint ruling with miniature answer sheets rising through
+  it; mid-rise a green check draws across each — the product's loop
+  (submitted → marked) told at a whisper. The green is the product's own
+  "graded" state, and the one second hue the ambient layer is allowed.
+- **Analytics — `measure`.** Graph paper, and the score-distribution curve
+  drawing itself as a full-width ribbon in the band's bottom padding, directly
+  under the histogram it mirrors.
+- **Closing band.** `.cta-sheen`: one slow pass of light across `.cta-rules`,
+  travelling for a third of its loop and resting for the rest.
+
+The budget rules are inherited from the measured precedents: only `transform`,
+`opacity` and dash-offset ever animate; soft edges are gradients that reach
+zero inside their own box; ruling stays ≤5.5% foreground (7% dark) and brand
+washes peak ≤8% light / 9% dark — inside the ~9% at which `--muted-foreground`
+was still measured at 5.1:1. The host section is `relative isolate` and the
+layer sits at `-z-10`, which paints above the section's own background but
+under all its content. Under reduced motion the paper stays, the scan is
+removed rather than parked, the sheets rest still and already graded, and the
+curve is simply there.
 
 ## Tokens and typography
 
