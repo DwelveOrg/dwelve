@@ -74,16 +74,17 @@
      segment thumb is a pill, and the token says so. Genuine circles (avatars,
      status dots, spinners) keep their own `rounded-full` and are unaffected.
 
-     v5 ramp (kept in lockstep with the app repo): a control (r-3, buttons and
-     inputs) sits at 10px, a card (r-5) at 16px, and a feature panel or dialog
-     (r-6/r-7) at 20–24px. r-1/r-2 stay small for nested-tight elements. */
-  --r-1: 5px;
-  --r-2: 7px;
-  --r-3: 10px;
-  --r-4: 12px;
-  --r-5: 16px;
-  --r-6: 20px;
-  --r-7: 24px;
+     v5 ramp (kept in lockstep with the app repo; nudged up once more at the
+     maintainer's request): a control (r-3, buttons and inputs) sits at 12px,
+     a card (r-5) at 20px, and a feature panel or dialog (r-6/r-7) at 24–28px.
+     r-1/r-2 stay smaller for nested-tight elements. */
+  --r-1: 6px;
+  --r-2: 8px;
+  --r-3: 12px;
+  --r-4: 14px;
+  --r-5: 20px;
+  --r-6: 24px;
+  --r-7: 28px;
   --radius-pill: 9999px;
 
   /* Kept because shadcn primitives and a few call sites still read it. It is an
