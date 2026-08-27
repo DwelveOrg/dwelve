@@ -3375,6 +3375,7 @@ translation: {
             edit: "Javob kalitlari aniqlashtiriladi",
             publish: "Faqat tasdiqlangan testlar eʼlon qilinadi",
           },
+          scrollHint: "Pastga",
           schoolsTitle: "Maktablar va xususiy oʻquv markazlari uchun yaratilgan",
           useCases: {
             quizzes: "Haftalik quizlar",

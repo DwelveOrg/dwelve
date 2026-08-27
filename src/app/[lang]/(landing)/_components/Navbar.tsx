@@ -168,7 +168,7 @@ export default function Navbar() {
             : "border-transparent bg-transparent",
         )}
       >
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr]">
+        <div className="mx-auto flex min-h-[var(--header-h)] w-full max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:grid lg:grid-cols-[1fr_auto_1fr]">
           {/* Brand mark */}
           <div className="flex items-center justify-self-start">
             <LocaleLink

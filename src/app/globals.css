@@ -84,6 +84,14 @@
      alias for the middle of the ramp, not the source the ramp derives from. */
   --radius: var(--r-3);
 
+  /* The height of the sticky marketing header, as a token rather than a number
+     copied into two places. It exists because the landing hero is a full
+     viewport *scene* — `min-h-[calc(100svh-var(--header-h))]` — and a hero that
+     subtracts a guessed header height is a hero that is 4px too tall on the day
+     someone changes the bar's padding. `Navbar` applies it as a `min-h` on its
+     own row, so the token is what *sets* the height, not a note about it. */
+  --header-h: 4.75rem;
+
   /* --- Brand === action. One hue, one token pair. ------------------------ */
   --brand: #5F40D5;
   --brand-ink: #14102E;

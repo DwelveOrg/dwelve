@@ -3439,6 +3439,7 @@ translation: {
             edit: "Answer keys adjusted",
             publish: "Only approved tests go live",
           },
+          scrollHint: "Scroll",
           schoolsTitle: "Made for schools and private learning centers",
           useCases: {
             quizzes: "Weekly quizzes",
