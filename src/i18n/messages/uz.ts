@@ -3358,7 +3358,7 @@ translation: {
           analytics: "Tahlillar",
           accordion: "FAQ",
           login: "Kirish",
-          signup: "Birinchi testni yarating",
+          signup: "Qoʻshiling",
         },
         main: {
           title: "Maktab testlarini bir necha daqiqada onlayn yarating va ishlang.",

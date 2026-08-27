@@ -3428,7 +3428,7 @@ translation: {
           analytics: "Analytics",
           accordion: "FAQ",
           login: "Login",
-          signup: "Create your first test",
+          signup: "Join free",
         },
         main: {
           title: "Create and take school tests online in minutes.",
