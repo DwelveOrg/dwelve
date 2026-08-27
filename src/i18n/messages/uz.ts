@@ -60,7 +60,7 @@ translation: {
         },
         actions: { saveError: "Jarayonni saqlab boʻlmadi. Qayta urinib koʻring.", skip: "Hozircha oʻtkazib yuborish", skipStep: "Bu qadamni oʻtkazish", skipAll: "Sozlashni oʻtkazish", logOut: "Chiqish", back: "Orqaga", next: "Keyingi", getStarted: "Boshlash", finish: "Panelni ochish", continue: "Davom etish", working: "Bajarilmoqda…" },
         access: {
-          eyebrow: "Dwelve'ga xush kelibsiz",
+          eyebrow: "Dwelveʼga xush kelibsiz",
           choose: "Tanlash",
           selected: "Tanlandi",
           success: "Ruxsat tasdiqlandi",
@@ -74,8 +74,8 @@ translation: {
           steps: {
             welcome: {
               nav: "Tanishuv",
-              title: "Dwelve'ga xush kelibsiz, {{name}}",
-              description: "Dwelve'da maktab testlar tuzadi, ularni baholaydi va oʻquvchilar holatini kuzatadi. Uch qisqa qadam — va siz ichkaridasiz.",
+              title: "Dwelveʼga xush kelibsiz, {{name}}",
+              description: "Dwelveʼda maktab testlar tuzadi, ularni baholaydi va oʻquvchilar holatini kuzatadi. Uch qisqa qadam — va siz ichkaridasiz.",
             },
             path: {
               nav: "Qoʻshilish yoʻli",
@@ -89,7 +89,7 @@ translation: {
             },
           },
           welcome: {
-            body: "Dwelve'dagi har bir maktab uchta tamoyil asosida ishlaydi. Ularni hozir bilsangiz, qolgani oʻz-oʻzidan tushunarli boʻladi.",
+            body: "Dwelveʼdagi har bir maktab uchta tamoyil asosida ishlaydi. Ularni hozir bilsangiz, qolgani oʻz-oʻzidan tushunarli boʻladi.",
             asideTitle: "Tanishganimdan xursandman, {{name}}",
             asideBody: "Bu yerda hech narsa abadiy emas. Maktabdan chiqish, boshqasiga qoʻshilish yoki shu akkaunt bilan bir vaqtda bir nechtasida boʻlish mumkin.",
             points: {
@@ -135,7 +135,7 @@ translation: {
             ready: { nav: "Kirish tayyor", title: "Oʻqituvchi kirishi tayyor", description: "Siz «{{school}}» ga ulandingiz. Batafsil maʼlumot faqat sizga biriktirilgan sinflar bilan cheklangan." },
             classes: { nav: "Sinflaringiz", title: "Biriktirilgan sinflarda ishlang", description: "Har bir sinfda roʻyxat, testlar va natijalar bor. Qaysi sinflarga kirishingizni administrator belgilaydi.", assigned: "Biriktirilgan sinflar", waiting: "Hali sinf biriktirilmagan. Administrator sinf qoʻshgach panelda maʼlumotlar koʻrinadi." },
             tests: { nav: "Test va natijalar", title: "Test yarating va tekshiring", description: "Boshqa oʻqituvchining sinflarini ochmasdan test yaratish, nashr qilish va javoblarni tekshirish uchun sinfni oching." },
-            analytics: { nav: "Tahlil", title: "Yordam kerak joylarni aniqlang", description: "Panel sizning sinflaringiz uchun trend, baholar taqsimoti, sinflar taqqoslanishi va kutilayotgan tekshiruvni birlashtiradi." },
+            analytics: { nav: "Tahlil", title: "Yordam kerak boʻlgan joylarni aniqlang", description: "Panel sizning sinflaringiz uchun trend, baholar taqsimoti, sinflar taqqoslanishi va kutilayotgan tekshiruvni birlashtiradi." },
           },
           student: {
             ready: { nav: "Kirish tayyor", title: "Maktabga qoʻshildingiz", description: "«{{school}}» dagi oʻquvchi kirishingiz tayyor. Panelda faqat sinflaringiz, urinishlaringiz va eʼlon qilingan natijalar koʻrinadi." },
@@ -208,23 +208,23 @@ translation: {
           },
           stageSubtitle: {
             fresh: {
-              admin: "Ish maydoni bo'sh. Odamlarni qo'shish uchun sinf yarating.",
-              teacher: "Hozircha tayinlanmagan. Administrator sizni qo'shgach, sinflar shu yerda ko'rinadi.",
-              student: "Siz tizimdasiz, lekin hali ro'yxatdan o'tmagansiz. Sinf toping.",
+              admin: "Ish maydoni boʻsh. Odamlarni qoʻshish uchun sinf yarating.",
+              teacher: "Hozircha tayinlanmagan. Administrator sizni qoʻshgach, sinflar shu yerda koʻrinadi.",
+              student: "Siz tizimdasiz, lekin hali roʻyxatdan oʻtmagansiz. Sinf toping.",
             },
             populating: {
-              admin: "Sinflar yaratildi. O'qituvchi va o'quvchilarni taklif qiling.",
-              teacher: "Sinflaringiz tayyor. Tayyor bo'lganingizda ish qo'shing.",
-              student: "Siz ro'yxatdasiz. O'qituvchilar e'lon qilgach, topshiriqlar shu yerda chiqadi.",
+              admin: "Sinflar yaratildi. Oʻqituvchi va oʻquvchilarni taklif qiling.",
+              teacher: "Sinflaringiz tayyor. Tayyor boʻlganingizda ish qoʻshing.",
+              student: "Siz roʻyxatdasiz. Oʻqituvchilar eʼlon qilgach, topshiriqlar shu yerda chiqadi.",
             },
             awaiting: {
-              admin: "Hammasi joyida. Tahlil birinchi baholar bilan paydo bo'ladi.",
-              teacher: "Sinf tayyor. Natijalar ishlar baholangach ko'rinadi.",
+              admin: "Hammasi joyida. Tahlil birinchi baholar bilan paydo boʻladi.",
+              teacher: "Sinf tayyor. Natijalar ishlar baholangach koʻrinadi.",
               student: "Hammasi tayyor. Ballaringiz ishlar baholangach chiqadi.",
             },
             active: {
-              admin: "Maktabingiz ko'rsatkichlari mana shunday.",
-              teacher: "Sinflaringiz ko'rsatkichlari mana shunday.",
+              admin: "Maktabingiz koʻrsatkichlari mana shunday.",
+              teacher: "Sinflaringiz koʻrsatkichlari mana shunday.",
               student: "Ishlaringiz holati mana shunday.",
             },
           },
@@ -232,29 +232,29 @@ translation: {
             title: "Ish maydonini sozlash",
             progress: "{{total}} tadan {{completed}} tasi bajarildi",
             admin: {
-              class: { title: "Birinchi sinfni yarating", description: "Sinflarda o'quvchilar, ishlar va natijalar birlashadi." },
-              teachers: { title: "O'qituvchini taklif qiling", description: "O'qituvchilar umumiy kod emas, shaxsiy havola oladi." },
-              students: { title: "O'quvchilarni qo'shing", description: "Maktab kodini ulashing yoki maktab sahifasidan qo'shing." },
-              assessment: { title: "Ish e'lon qiling", description: "Studiyada test tuzing va sinfga tayinlang." },
-              results: { title: "Birinchi natijalarni yig'ing", description: "O'quvchilar topshirgach, bu sahifadagi tahlil jonlanadi." },
+              class: { title: "Birinchi sinfni yarating", description: "Sinflarda oʻquvchilar, ishlar va natijalar birlashadi." },
+              teachers: { title: "Oʻqituvchini taklif qiling", description: "Oʻqituvchilar umumiy kod emas, shaxsiy havola oladi." },
+              students: { title: "Oʻquvchilarni qoʻshing", description: "Maktab kodini ulashing yoki maktab sahifasidan qoʻshing." },
+              assessment: { title: "Ish eʼlon qiling", description: "Studiyada test tuzing va sinfga tayinlang." },
+              results: { title: "Birinchi natijalarni yigʻing", description: "Oʻquvchilar topshirgach, bu sahifadagi tahlil jonlanadi." },
             },
             teacher: {
-              classes: { title: "Sinfga tayinlaning", description: "Administrator sizni dars beradigan sinflarga qo'shadi." },
-              students: { title: "O'quvchilarni kuting", description: "O'quvchilar kod orqali qo'shiladi yoki administrator qo'shadi." },
-              assessment: { title: "Ish e'lon qiling", description: "Studiyada test tuzing va sinfingizga tayinlang." },
-              results: { title: "Birinchi natijalarni yig'ing", description: "Baho va dinamika ishlar topshirilgach ko'rinadi." },
+              classes: { title: "Sinfga tayinlaning", description: "Administrator sizni dars beradigan sinflarga qoʻshadi." },
+              students: { title: "Oʻquvchilarni kuting", description: "Oʻquvchilar kod orqali qoʻshiladi yoki administrator qoʻshadi." },
+              assessment: { title: "Ish eʼlon qiling", description: "Studiyada test tuzing va sinfingizga tayinlang." },
+              results: { title: "Birinchi natijalarni yigʻing", description: "Baho va dinamika ishlar topshirilgach koʻrinadi." },
             },
             student: {
-              join: { title: "Sinfga qo'shiling", description: "Katalogni ko'rib chiqing va kerakli sinflarga so'rov yuboring." },
+              join: { title: "Sinfga qoʻshiling", description: "Katalogni koʻrib chiqing va kerakli sinflarga soʻrov yuboring." },
               upcoming: { title: "Birinchi topshiriqni oling", description: "Tayinlangan ishlar muddati bilan shu yerda chiqadi." },
-              results: { title: "Birinchi natijani ko'ring", description: "Ball va taraqqiyot ishlar baholangach ko'rinadi." },
+              results: { title: "Birinchi natijani koʻring", description: "Ball va taraqqiyot ishlar baholangach koʻrinadi." },
             },
           },
           invite: {
-            title: "Odamlarni qo'shing",
-            description: "O'quvchilar maktab kodi bilan qo'shiladi. O'qituvchiga shaxsiy havola kerak, chunki bu rol javoblar kalitini ko'radi.",
-            inviteTeacher: "O'qituvchini taklif qilish",
-            manageMembers: "A'zolarni boshqarish",
+            title: "Odamlarni qoʻshing",
+            description: "Oʻquvchilar maktab kodi bilan qoʻshiladi. Oʻqituvchiga shaxsiy havola kerak, chunki bu rol javoblar kalitini koʻradi.",
+            inviteTeacher: "Oʻqituvchini taklif qilish",
+            manageMembers: "Aʼzolarni boshqarish",
           },
           importTest: {
             title: "Testni import qilish",
@@ -268,26 +268,26 @@ translation: {
           roster: {
             title: "Sinflar qisqacha",
             class: "Sinf",
-            students: "O'quvchilar",
+            students: "Oʻquvchilar",
             completion: "Bajarilishi",
-            average: "O'rtacha",
+            average: "Oʻrtacha",
             thisWeek: "Shu haftada",
             viewAll: "Barchasi",
-            emptyTitle: "Hali sinf yo'q",
-            emptyDescription: "Sinf yarating, jadval uning hajmi, bajarilishi va o'rtacha bahosini ko'rsatadi.",
+            emptyTitle: "Hali sinf yoʻq",
+            emptyDescription: "Sinf yarating, jadval uning hajmi, bajarilishi va oʻrtacha bahosini koʻrsatadi.",
             emptyAction: "Sinf yaratish",
           },
           nextUp: {
             title: "Keyingisi",
             open: "Ochish",
-            emptyTitle: "Muddati yo'q",
-            emptyDescription: "Hozircha bo'sh. Yangi topshiriqlar e'lon qilinishi bilan shu yerda chiqadi.",
+            emptyTitle: "Muddati yoʻq",
+            emptyDescription: "Hozircha boʻsh. Yangi topshiriqlar eʼlon qilinishi bilan shu yerda chiqadi.",
           },
           discover: {
             title: "Sinf topish",
             heading: "Sizga {{count}} ta sinf ochiq",
-            description: "Maktab taklif qilayotgan sinflarni ko'ring va so'rov yuboring.",
-            action: "Sinflarni ko'rish",
+            description: "Maktab taklif qilayotgan sinflarni koʻring va soʻrov yuboring.",
+            action: "Sinflarni koʻrish",
           },
           support: {
             title: "Yordam kerakmi?",
@@ -688,7 +688,7 @@ translation: {
                 "Hisob maʼlumotlaringiz avtomatik biriktiriladi. Skrinshotlarni yuborishdan oldin pochta ilovasida qoʻshing.",
               tooShort: "Kamida {{count}} ta belgi yozing, shunda yordam bera olamiz.",
               opened: "Xat qoralamasi pochta ilovangizda ochildi — bizga yuboring.",
-              placeholder: "Muammo yoki gʻoyani tasvirlab bering...",
+              placeholder: "Muammo yoki gʻoyani tasvirlab bering…",
               close: "Oynani yopish",
               submit: "Yuborish",
             },
@@ -698,10 +698,10 @@ translation: {
               title: "Hujjatlar",
               description: "Dwelve haqida qisqa maʼlumot va uning foydasi.",
               paragraphs: [
-                "Dwelve — maktab baholashlarini yaratish, o‘tkazish va tekshirish uchun yagona platforma. O‘qituvchilar test va imtihonlarni tez tuzadi, ularni o‘quvchilarga yuboradi va natijalarni real vaqtda ko‘radi.",
-                "Boshqaruv paneli sinflar, uy vazifalari va imtihonlarni aniq statuslar, muddatlar va tezkor amallar bilan tartiblaydi. O‘quvchilar testlarga tez kiradi, topshiriqlarni onlayn topshiradi va baholar e’lon qilingach darhol fikr-mulohaza oladi.",
-                "Asosiy imkoniyatlar: vaqt bilan boshqariladigan imtihonlar, tezkor baholash, qayta ishlatiladigan savollar banki, natijalar tahlili va muhim xabarlarni ajratib ko‘rsatadigan bildirishnomalar markazi.",
-                "Dwelve tezlik, aniqlik va qulaylik uchun yaratilgan. Yorug‘ va qorong‘i mavzular, moslashuvchan dizayn va aniq ish jarayonlari qo‘lda tekshirish ishini kamaytiradi va o‘qituvchi hamda o‘quvchini bir yo‘nalishda ushlab turadi.",
+                "Dwelve — maktab baholashlarini yaratish, oʻtkazish va tekshirish uchun yagona platforma. Oʻqituvchilar test va imtihonlarni tez tuzadi, ularni oʻquvchilarga yuboradi va natijalarni real vaqtda koʻradi.",
+                "Boshqaruv paneli sinflar, uy vazifalari va imtihonlarni aniq statuslar, muddatlar va tezkor amallar bilan tartiblaydi. Oʻquvchilar testlarga tez kiradi, topshiriqlarni onlayn topshiradi va baholar eʼlon qilingach darhol fikr-mulohaza oladi.",
+                "Asosiy imkoniyatlar: vaqt bilan boshqariladigan imtihonlar, tezkor baholash, qayta ishlatiladigan savollar banki, natijalar tahlili va muhim xabarlarni ajratib koʻrsatadigan bildirishnomalar markazi.",
+                "Dwelve tezlik, aniqlik va qulaylik uchun yaratilgan. Yorugʻ va qorongʻi mavzular, moslashuvchan dizayn va aniq ish jarayonlari qoʻlda tekshirish ishini kamaytiradi va oʻqituvchi hamda oʻquvchini bir yoʻnalishda ushlab turadi.",
               ],
             },
           },
@@ -897,7 +897,7 @@ translation: {
             formatDetected:
               "Format — SAT, IELTS yoki oddiy test — hujjatning oʻzidan aniqlanadi. Keyinchalik test sozlamalarida oʻzgartirishingiz mumkin.",
             cta: {
-              title: "PDF’ni testga aylantiring",
+              title: "PDFʼni testga aylantiring",
               description:
                 "Oʻtgan yilgi ish yoki toʻplam bobini yuklang. Har bir savol, variant va javob kaliti oʻsha yerdan oʻqiladi — siz tayyor qoralamani tekshirasiz, uni yozib chiqmaysiz.",
               short: "Ishni yuklang — savol, variant va javob kaliti oʻsha yerdan oʻqiladi.",
@@ -908,10 +908,10 @@ translation: {
             answerRule:
               "Javoblar faqat sahifada belgilangan joyda toʻldiriladi — belgi, qalin variant yoki javoblar kaliti. Testingizda javoblar sahifasi boʻlsa, uni ham tanlovga qoʻshing. Belgilanmagan savollar javobini oʻzingiz tanlaysiz.",
             choose: {
-              heading: "PDF’dan test import qilish",
+              heading: "PDFʼdan test import qilish",
               subheading:
                 "Ishni yuklang, savollar joylashgan sahifalarni tanlang — test oʻzi yigʻiladi.",
-              dropzone: "PDF’ni shu yerga tashlang",
+              dropzone: "PDFʼni shu yerga tashlang",
               browse: "Fayl tanlash",
               constraints: "PDF, {{size}} MB va {{pages}} sahifagacha.",
               explainer:
@@ -956,8 +956,8 @@ translation: {
               },
             },
             banner: {
-              title_one: "PDF’ingizdan {{count}} savol import qilindi.",
-              title_other: "PDF’ingizdan {{count}} savol import qilindi.",
+              title_one: "PDFʼingizdan {{count}} savol import qilindi.",
+              title_other: "PDFʼingizdan {{count}} savol import qilindi.",
               missingAnswers_one:
                 "{{count}} savolda toʻgʻri javob yoʻq — chop etishdan oldin tanlang.",
               missingAnswers_other:
@@ -966,7 +966,7 @@ translation: {
               truncated:
                 "{{total}} savol topildi, birinchi {{count}} tasi import qilindi — bu bitta import chegarasi.",
               incomplete:
-                "Taxminan {{total}} savol sanaldi, ammo faqat {{count}} tasi yigʻildi. Nimadir yetishmasa, PDF’ni tekshirib qayta import qiling.",
+                "Taxminan {{total}} savol sanaldi, ammo faqat {{count}} tasi yigʻildi. Nimadir yetishmasa, PDFʼni tekshirib qayta import qiling.",
               review: "Chop etishdan oldin savol matni va javoblarni ish bilan solishtiring.",
               dismiss: "Yopish",
             },
@@ -1198,7 +1198,7 @@ translation: {
               showAnswersHint: "Oʻchirilsa, testni boshqa sinf bilan qayta ishlatish mumkin.",
               showFeedback: "Izohlaringizni koʻrsatish",
               showFeedbackHint: "Tekshirishda qoldirgan savol izohlari.",
-              passingHint: "{{total}} balldan. Oʻtish bali boʻlmasa, boʻsh qoldiring.",
+              passingHint: "{{total}} balldan. Oʻtish balli boʻlmasa, boʻsh qoldiring.",
               passingTooHigh: "Mavjud {{total}} balldan koʻp boʻlishi mumkin emas.",
             },
             preview: {
@@ -1276,7 +1276,7 @@ translation: {
               mean: "Oʻrtacha ball",
               median: "Mediana {{value}}",
               passRate: "Oʻtganlar ulushi",
-              noPassMark: "Oʻtish bali belgilanmagan",
+              noPassMark: "Oʻtish balli belgilanmagan",
               range: "Eng past–eng yuqori",
               spread: "Tarqoqlik ±{{value}}",
               submitted: "Topshirdi",
@@ -2129,7 +2129,7 @@ translation: {
             errorDescription: "Birozdan soʻng qayta urinib koʻring.",
             emptyTitle: "Kutilayotgan soʻrovlar yoʻq",
             emptyDescription: "Bu sinf uchun yangi soʻrovlar shu yerda koʻrinadi.",
-            rejectTitle: "{{name}} soʻrovini rad etilsinmi?",
+            rejectTitle: "{{name}} soʻrovi rad etilsinmi?",
             rejectDescription: "Xohlasangiz, oʻquvchiga sababni koʻrsating.",
             reasonLabel: "Sabab (ixtiyoriy)",
             reasonPlaceholder: "Oʻquvchi uchun sabab qoʻshing…",
@@ -2343,9 +2343,9 @@ translation: {
         profile: {
           subtitle: "Hisobingiz, maktab profili, xavfsizlik, sozlamalar va yordam — bir joyda.",
           unavailable:
-            "Hisob ma’lumotlarini yuklab bo‘lmadi. Sozlamalar va yordam ishlamoqda — birozdan so‘ng qayta urinib ko‘ring.",
+            "Hisob maʼlumotlarini yuklab boʻlmadi. Sozlamalar va yordam ishlamoqda — birozdan soʻng qayta urinib koʻring.",
           tabs: {
-            label: "Hisob bo‘limlari",
+            label: "Hisob boʻlimlari",
             account: "Hisob",
             security: "Xavfsizlik",
             preferences: "Sozlamalar",
@@ -2356,44 +2356,44 @@ translation: {
           },
           roles: {
             admin: "Administrator",
-            teacher: "O‘qituvchi",
-            student: "O‘quvchi",
+            teacher: "Oʻqituvchi",
+            student: "Oʻquvchi",
           },
           form: {
-            save: "O‘zgarishlarni saqlash",
+            save: "Oʻzgarishlarni saqlash",
             updated: "Profil yangilandi",
-            error: "Ma’lumotlarni tekshirib, qayta urinib ko‘ring.",
+            error: "Maʼlumotlarni tekshirib, qayta urinib koʻring.",
           },
           avatar: {
-            change: "Rasmni o‘zgartirish",
+            change: "Rasmni oʻzgartirish",
             remove: "Rasmni olib tashlash",
             updated: "Rasm yangilandi",
             removed: "Rasm olib tashlandi",
-            tooLarge: "Fayl 2 MB dan katta bo‘lmasligi kerak.",
+            tooLarge: "Fayl 2 MB dan katta boʻlmasligi kerak.",
             badType: "JPEG, PNG yoki WebP formatidan foydalaning.",
-            hint: "2 MB gacha bo‘lgan kvadrat JPEG, PNG yoki WebP eng yaxshi ko‘rinadi.",
+            hint: "2 MB gacha boʻlgan kvadrat JPEG, PNG yoki WebP eng yaxshi koʻrinadi.",
           },
           account: {
             title: "Hisob",
-            description: "Dwelve hisobingiz uchun asosiy ma’lumotlar.",
+            description: "Dwelve hisobingiz uchun asosiy maʼlumotlar.",
             fullName: {
-              label: "To‘liq ism",
-              placeholder: "To‘liq ismingizni kiriting",
+              label: "Toʻliq ism",
+              placeholder: "Toʻliq ismingizni kiriting",
               error: "Iltimos, ismingizni kiriting.",
             },
             email: {
               label: "Email",
-              hint: "Emailni o‘zgartirish hozircha mavjud emas. Kerak bo‘lsa yordamga murojaat qiling.",
+              hint: "Emailni oʻzgartirish hozircha mavjud emas. Kerak boʻlsa yordamga murojaat qiling.",
             },
           },
           roleProfile: {
             teacher: {
-              title: "O‘qituvchi profili",
-              description: "«{{school}}» administrator va o‘quvchilariga ko‘rinadi.",
+              title: "Oʻqituvchi profili",
+              description: "«{{school}}» administrator va oʻquvchilariga koʻrinadi.",
             },
             student: {
-              title: "O‘quvchi profili",
-              description: "«{{school}}» o‘qituvchi va administratorlariga ko‘rinadi.",
+              title: "Oʻquvchi profili",
+              description: "«{{school}}» oʻqituvchi va administratorlariga koʻrinadi.",
             },
             phone: {
               label: "Telefon",
@@ -2401,8 +2401,8 @@ translation: {
             },
             bio: {
               label: "Qisqa bio",
-              placeholder: "O‘quvchilar va jamoa uchun qisqa ma’lumot yozing.",
-              hint: "500 belgigacha. O‘qituvchi kartochkasida ko‘rinadi.",
+              placeholder: "Oʻquvchilar va jamoa uchun qisqa maʼlumot yozing.",
+              hint: "500 belgigacha. Oʻqituvchi kartochkasida koʻrinadi.",
             },
             classes: {
               title: "Sinflar ({{count}})",
@@ -2421,13 +2421,13 @@ translation: {
           },
           password: {
             title: "Parol",
-            description: "Email orqali kirish uchun parolni o‘zgartiring.",
-            oauthOnly: "Bu hisob boshqa xizmat orqali kiradi — bu yerda parol yo‘q.",
+            description: "Email orqali kirish uchun parolni oʻzgartiring.",
+            oauthOnly: "Bu hisob boshqa xizmat orqali kiradi — bu yerda parol yoʻq.",
             set: {
-              title: "Parol o‘rnatish",
-              description: "Email orqali ham kirish uchun parol qo‘shing.",
-              submit: "Parol o‘rnatish",
-              updated: "Parol o‘rnatildi. Endi email orqali kira olasiz.",
+              title: "Parol oʻrnatish",
+              description: "Email orqali ham kirish uchun parol qoʻshing.",
+              submit: "Parol oʻrnatish",
+              updated: "Parol oʻrnatildi. Endi email orqali kira olasiz.",
             },
             current: {
               label: "Joriy parol",
@@ -2446,7 +2446,7 @@ translation: {
             },
             submit: "Parolni yangilash",
             updated: "Parol yangilandi. Boshqa qurilmalar tizimdan chiqarildi.",
-            error: "Parolni almashtirib bo‘lmadi. Qayta urinib ko‘ring.",
+            error: "Parolni almashtirib boʻlmadi. Qayta urinib koʻring.",
           },
           sessions: {
             title: "Faol seanslar",
@@ -2455,8 +2455,8 @@ translation: {
             revoke: "Bekor qilish",
             signOut: "Chiqish",
             revoked: "Seans bekor qilindi.",
-            empty: "Faol seanslar yo‘q.",
-            unknownDevice: "Noma’lum qurilma",
+            empty: "Faol seanslar yoʻq.",
+            unknownDevice: "Nomaʼlum qurilma",
           },
         },
         notifications: {
@@ -2489,15 +2489,15 @@ translation: {
           emptyDescription: "Sinflar, testlar va hisobingiz boʻyicha yangi xabarlar shu yerda koʻrinadi.",
           errorTitle: "Bildirishnomalarni yuklab boʻlmadi",
           errorDescription: "Bir ozdan keyin qayta urinib koʻring.",
-          loading: "Yuklanmoqda...",
+          loading: "Yuklanmoqda…",
           loadMore: "Yana yuklash",
           delete: "Bildirishnomani oʻchirish",
           unread: "Oʻqilmagan",
-          read: "Avvalgi",
+          read: "Oʻqilgan",
           close: "Yopish",
           items: {
             signupGreeting: {
-              title: "Dwelve’ga xush kelibsiz",
+              title: "Dwelveʼga xush kelibsiz",
               description: "Hisobingiz tayyor. Sizni koʻrganimizdan xursandmiz.",
             },
             loginGreeting: {
@@ -2711,7 +2711,7 @@ translation: {
               questions: "Savollar",
               totalMarks: "Jami ball",
               deadline: "Muddat",
-              passingScore: "Oʻtish bali",
+              passingScore: "Oʻtish balli",
             },
             units: {
               minutes: "daq",
@@ -2738,7 +2738,7 @@ translation: {
             codeSprint: {
               title: "Kod sprint sinovi",
               subject: "Dasturlash asoslari",
-              instructor: "Aziz Umarkhanov",
+              instructor: "Aziz Umarxonov",
             },
             historyFinal: {
               title: "Jahon tarixi yakuni",
@@ -2751,7 +2751,7 @@ translation: {
       tests: {
         score: {
           meterLabel: "{{max}} tadan {{value}} ta, {{percent}} foiz",
-          passAt: "Oʻtish bali {{score}}",
+          passAt: "Oʻtish balli {{score}}",
         },
       },
       exam: {
@@ -2799,7 +2799,7 @@ translation: {
         states: {
           forbidden: {
             title: "Bu test sizga ochiq emas",
-            description: "Ehtimol, siz u tegishli sinfda emassiz.",
+            description: "Ehtimol, siz u tegishli boʻlgan sinfda emassiz.",
           },
           notFound: {
             title: "Test topilmadi",
@@ -2963,10 +2963,10 @@ translation: {
           tryAgain: "Qayta topshirish",
           experience: {
             title: "Testni topshirish qanday kechdi?",
-            subtitle: "Ilovaning oʻzi haqida — taymer, koʻrinish, xalaqit bergan narsalar. Savollar yoki bahoyingiz haqida emas.",
+            subtitle: "Ilovaning oʻzi haqida — taymer, koʻrinish, xalaqit bergan narsalar. Savollar yoki bahongiz haqida emas.",
             scale: {
               1: "Noqulay",
-              2: "Uncha emas",
+              2: "Unchalik emas",
               3: "Normal",
               4: "Yaxshi",
               5: "Juda qulay",
@@ -3358,7 +3358,7 @@ translation: {
           analytics: "Tahlillar",
           accordion: "FAQ",
           login: "Kirish",
-          signup: "Boshlash",
+          signup: "Qoʻshiling",
         },
         main: {
           title: "Maktab testlarini bir necha daqiqada onlayn yarating va ishlang.",
@@ -3491,7 +3491,7 @@ translation: {
         accordion: {
           label: "FAQ",
           title: "Boshlashdan oldin bilishingiz kerak boʻlgan hamma narsa",
-          subtitle: "Dwelve’dan foydalanayotgan oʻqituvchi va markazlar uchun qisqa javoblar.",
+          subtitle: "Dwelveʼdan foydalanayotgan oʻqituvchi va markazlar uchun qisqa javoblar.",
           item1: {
             question: "Oʻquvchilar ilova oʻrnatishi kerakmi?",
             answer: "Yoʻq. Dwelve brauzerning oʻzida telefon, planshet va noutbukda ishlaydi.",
@@ -3509,7 +3509,7 @@ translation: {
             answer: "Ha. Savollarni bankka saqlab, uy vazifasi, quiz yoki imtihonlarda qayta qoʻllashingiz mumkin.",
           },
           item5: {
-            question: "PDF’dan test yaratish mumkinmi?",
+            question: "PDFʼdan test yaratish mumkinmi?",
             answer:
               "Ha. Dars materialini yuklang — Dwelve qoralama savollarni tuzadi, ularni eʼlon qilishdan oldin koʻrib chiqib tahrirlashingiz mumkin.",
           },
@@ -3564,7 +3564,7 @@ translation: {
       },
       auth: {
         common: {
-          backToLanding: "Landing sahifaga qaytish",
+          backToLanding: "Bosh sahifaga qaytish",
           backToLogin: "Kirishga qaytish",
         },
         visual: {
@@ -3593,7 +3593,7 @@ translation: {
             features: {
               grading: "Tezkor avtomatik baholash",
               analytics: "Rivojlanish tahlili",
-              pdf: "PDF’dan test yaratish",
+              pdf: "PDFʼdan test yaratish",
               device: "Har qanday qurilmada ishlaydi",
             },
             score: {
@@ -3648,7 +3648,7 @@ translation: {
         login: {
           access: "Dwelve kirishi",
           title: "Xush kelibsiz",
-          subtitle: "Onlayn test yaratish yoki topshirish uchun Dwelve’ga qoʻshiling.",
+          subtitle: "Onlayn test yaratish yoki topshirish uchun Dwelveʼga qoʻshiling.",
           google: "Google bilan davom etish",
           or: "yoki",
           loginLabel: "Login",
@@ -3683,7 +3683,7 @@ translation: {
           terms: "Davom etish orqali siz Shartlar va Maxfiylik siyosatiga rozilik bildirasiz.",
           success: "Hisob yaratildi",
           createAccount: "Hisob yaratish",
-          adminPrompt: "Dwelve’ni maktab yoki markaz uchun sozlayapsizmi?",
+          adminPrompt: "Dwelveʼni maktab yoki markaz uchun sozlayapsizmi?",
           adminCta: "Administrator sifatida roʻyxatdan oʻtish",
           alreadyAccount: "Hisobingiz bormi?",
           login: "Kirish",
@@ -3691,7 +3691,7 @@ translation: {
         adminSignup: {
           access: "Markazni roʻyxatdan oʻtkazish",
           title: "Markazingizni roʻyxatdan oʻtkazing",
-          subtitle: "Dwelve’ni maktabingiz yoki oʻquv markazingiz uchun sozlang.",
+          subtitle: "Dwelveʼni maktabingiz yoki oʻquv markazingiz uchun sozlang.",
           step: "{{total}} dan {{current}}-bosqich",
           stepAccount: "Hisobingiz",
           stepCenter: "Markazingiz",

@@ -41,7 +41,6 @@ export default function AboutContent() {
   return (
     <>
       <PageHeader
-        eyebrow={t("landing.about.eyebrow")}
         title={t("landing.about.title")}
         lead={t("landing.about.lead")}
       />

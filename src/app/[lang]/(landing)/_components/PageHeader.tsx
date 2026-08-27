@@ -12,10 +12,13 @@ import { cn } from "@/lib/utils";
  * dot. Repeating that on `/terms` would be absurd, and giving each of the six
  * pages its own opening would give the site six different first impressions.
  *
- * So: one eyebrow, one `<h1>`, one lead paragraph, optional actions — centred on
- * the page, which is the same axis `SectionHeading` already puts every home-page
- * section on. Left-aligning these read as a different site the moment you
- * navigated to one, because nothing else on the site opens off-axis.
+ * So: one `<h1>`, one lead paragraph, optional actions — centred on the page,
+ * which is the same axis `SectionHeading` already puts every home-page section
+ * on. Left-aligning these read as a different site the moment you navigated to
+ * one, because nothing else on the site opens off-axis.
+ *
+ * There is deliberately no eyebrow above the `<h1>`: it only ever repeated the
+ * nav item the reader had just clicked, and a heading does not need a label.
  *
  * The `<h1>` uses the hero's own clamp one step down, which keeps a sub-page
  * recognisably part of the same document without competing with the page that
@@ -24,13 +27,11 @@ import { cn } from "@/lib/utils";
  * one ragged block.
  */
 export default function PageHeader({
-  eyebrow,
   title,
   lead,
   children,
   className,
 }: {
-  eyebrow?: string;
   title: string;
   lead?: string;
   /** Actions, a price, a status line — anything that belongs above the fold. */
@@ -47,15 +48,8 @@ export default function PageHeader({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        {eyebrow ? (
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{eyebrow}</p>
-        ) : null}
-
         <h1
-          className={cn(
-            "mx-auto max-w-3xl text-balance text-[clamp(2.1rem,4.6vw,3.1rem)] font-bold leading-[1.08] tracking-[-0.02em] text-foreground",
-            eyebrow && "mt-4",
-          )}
+          className="mx-auto max-w-3xl text-balance text-[clamp(2.1rem,4.6vw,3.1rem)] font-bold leading-[1.08] tracking-[-0.02em] text-foreground"
         >
           {title}
         </h1>
