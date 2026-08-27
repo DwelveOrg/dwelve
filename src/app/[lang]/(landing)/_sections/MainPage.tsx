@@ -59,7 +59,7 @@ const BEAT = {
   proof: 0.62,
   /** The object itself: it has its own seven-second loop, so it arrives early. */
   object: 0.22,
-  hint: 0.95,
+  hint: 0.72,
 } as const;
 
 /** `--ease-out-expo`, in the array form Motion wants. */
@@ -97,7 +97,7 @@ function MainPage() {
           field is full-bleed and behind everything: it is this box's ground, not
           a panel inside it, and `isolate` keeps its z-index local so it can
           never rise over the navbar. */}
-      <div className="relative isolate flex min-h-[calc(100svh-var(--header-h))] w-full flex-col justify-center px-4 pb-28 pt-10 sm:px-6 md:pt-14">
+      <div className="relative isolate flex min-h-[calc(100svh_-_var(--header-h))] w-full flex-col justify-center px-4 pb-32 pt-10 sm:px-6 md:pt-14">
         <HeroField className="pointer-events-none absolute inset-0 -z-10 h-full w-full" />
 
         <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-2">
@@ -160,7 +160,7 @@ function MainPage() {
               <MarkingStroke
                 delay={strokeDelay}
                 reduceMotion={reduceMotion}
-                className="mt-3 w-[min(19rem,72%)] text-brand"
+                className="mt-3 w-[min(23rem,84%)] text-brand"
               />
             </div>
 

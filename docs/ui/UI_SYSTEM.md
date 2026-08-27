@@ -37,19 +37,64 @@ Section spacing is intentionally generous (`py-24` with larger medium
 breakpoints). The sticky navbar switches from transparent to a bordered, blurred
 background after the hero edge.
 
-## The hero backdrop
+## The hero scene
 
-`HeroField` is a full-bleed WebGL layer behind the hero section: a lattice of
-answer bubbles crossed by a slow band of light that brightens and fills the ones
-it passes. It is the one place the landing page has an ambient background, and
-the reason it is allowed to exist is that it depicts the product's own object
-rather than being atmosphere — see the file's header for the full argument, and
-for the measured contrast numbers that keep it off the headline. Re-measure if
-the focus point or mask falloff changes.
+The home page opens on a **scene** rather than a section: the hero's inner frame
+is `min-h-[calc(100svh_-_var(--header-h))]`, so the first thing a visitor gets is
+one full viewport with the copy centred in it. `SchoolsBand` is therefore the
+first thing below the fold, and its top rule is the scene's horizon.
+
+The underscores in that class are load-bearing. `calc(100svh-var(--header-h))`
+is not a subtraction — CSS needs whitespace around the operator — and a `calc`
+the parser rejects takes the whole `min-height` with it, silently. `--header-h`
+is a token rather than a copied number, and `Navbar` applies it as a `min-h` on
+its own row, so the token *sets* the header height instead of describing it.
+
+### The ground
+
+`HeroField` is a full-bleed WebGL layer behind the scene: a lattice of answer
+bubbles crossed by a slow band of light that brightens and fills the ones it
+passes. It is the one place the landing page has an ambient background, and the
+reason it is allowed to exist is that it depicts the product's own object rather
+than being atmosphere — see the file's header for the full argument, and for the
+measured contrast numbers that keep it off the headline. Re-measure if the focus
+point or mask falloff changes. Its focus is expressed in normalised UV with an
+aspect-corrected falloff, so giving the scene a taller box moves no pixel of it
+relative to the headline column.
 
 `.hero-bloom` still sits inside the 3D scene's own box and is still the
 WebGL-absent fallback for `HeroScene`. Both scenes stop when off-screen or in a
 hidden tab and paint one still frame under reduced motion.
+
+### The entrance
+
+The hero is the one screen a visitor *arrives* at rather than scrolls to, so it
+is the one screen that assembles itself. `BEAT` in `MainPage.tsx` is the whole
+score in one object — badge, headline, mark, lede, CTAs, proof, object, hint —
+and it holds delays, not durations. `--dur-*` still tops out at 360ms for every
+control in the product; a page entrance is not a control, so the individual
+moves stay short and only the sequence is long.
+
+Two devices carry it:
+
+- **The headline reveals a line at a time.** `useLineSplit` measures where the
+  browser actually broke the `<h1>` (`Range.getClientRects()` after
+  `document.fonts.ready`) and each line becomes its own clipped box to rise out
+  of. The breaks are measured rather than authored because the headline is
+  `text-balance` in three languages — nobody can predict them, and hard-coding
+  them per language stops the headline being responsive. Server and first client
+  render emit plain text, so there is no hydration mismatch; the split is
+  dropped on resize and never happens under reduced motion. Each clip box is
+  grown past its line box and pulled back by the same margin, which is what
+  keeps Cyrillic descenders and the breve on Uzbek `Oʻ` from being shaved off.
+- **`MarkingStroke` signs the headline.** An underline, a lift, and a tick, in
+  `--brand`, drawn with `pathLength`. It answers the same objection `HeroField`
+  had to: it is the gesture a teacher makes on a page, not a swoosh, and it
+  lands under the sentence claiming tests come back graded.
+
+Under reduced motion every beat collapses to an opacity fade at zero delay and
+the mark is painted already drawn — it is the page's only visual claim about
+grading above the fold, so it is not dropped.
 
 ## Tokens and typography
 
@@ -77,6 +122,8 @@ Run `npm run check:contrast` after any token change.
 | FAQ disclosure | `src/components/ui/accordion.tsx` |
 | Section heading | `_components/SectionHeading.tsx` |
 | Feature bullet list | `_components/FeatureBullets.tsx` |
+| Grader's mark under display text | `_components/MarkingStroke.tsx` |
+| Rendered-line split for reveals | `_hooks/useLineSplit.ts` |
 | Sub-page opening (centred) | `_components/PageHeader.tsx` |
 | Violet closing band | `_components/ClosingCta.tsx` |
 | FAQ list without a heading | `_components/FaqList.tsx` |

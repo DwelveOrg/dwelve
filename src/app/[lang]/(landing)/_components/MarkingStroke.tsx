@@ -28,11 +28,11 @@ import { motion, type Transition } from "motion/react";
  */
 
 /** The underline: low at the left, drooping, lifting away to the right. */
-const UNDERLINE = "M3 11 C 74 20, 170 21, 252 9";
+const UNDERLINE = "M4 9 C 76 19, 172 20, 250 7";
 /** The second pass a hand makes without meaning to. */
-const UNDERPASS = "M26 17 C 92 22, 168 21, 240 14";
+const UNDERPASS = "M34 15 C 96 22, 158 22, 232 13";
 /** Pen down again, and the tick. */
-const TICK = "M262 13 L 271 21 L 296 4";
+const TICK = "M258 12 L 269 21 L 297 3";
 
 type MarkingStrokeProps = {
   /** Seconds to wait before the underline starts. */
@@ -57,12 +57,11 @@ export default function MarkingStroke({ delay, reduceMotion, className }: Markin
       viewBox="0 0 300 26"
       fill="none"
       className={className}
-      initial={false}
     >
       <motion.path
         d={UNDERLINE}
         stroke="currentColor"
-        strokeWidth={3.5}
+        strokeWidth={4.2}
         strokeLinecap="round"
         initial={{ pathLength: reduceMotion ? 1 : 0 }}
         animate={{ pathLength: 1 }}
@@ -71,9 +70,9 @@ export default function MarkingStroke({ delay, reduceMotion, className }: Markin
       <motion.path
         d={UNDERPASS}
         stroke="currentColor"
-        strokeWidth={2}
+        strokeWidth={2.4}
         strokeLinecap="round"
-        opacity={0.45}
+        opacity={0.5}
         initial={{ pathLength: reduceMotion ? 1 : 0 }}
         animate={{ pathLength: 1 }}
         transition={draw(delay + 0.1, 0.5)}
@@ -81,7 +80,7 @@ export default function MarkingStroke({ delay, reduceMotion, className }: Markin
       <motion.path
         d={TICK}
         stroke="currentColor"
-        strokeWidth={3.5}
+        strokeWidth={4.4}
         strokeLinecap="round"
         strokeLinejoin="round"
         initial={{ pathLength: reduceMotion ? 1 : 0 }}
