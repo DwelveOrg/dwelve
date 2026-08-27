@@ -29,7 +29,6 @@ export default async function TermsPage({ params }: { params: Promise<{ lang: st
   return (
     <>
       <PageHeader
-        eyebrow={tServer(lang, "landing.legal.eyebrow")}
         title={tServer(lang, "landing.legal.terms.title")}
         lead={tServer(lang, "landing.legal.terms.lead")}
       />

@@ -29,7 +29,6 @@ export default async function PrivacyPage({ params }: { params: Promise<{ lang: 
   return (
     <>
       <PageHeader
-        eyebrow={tServer(lang, "landing.legal.eyebrow")}
         title={tServer(lang, "landing.legal.privacy.title")}
         lead={tServer(lang, "landing.legal.privacy.lead")}
       />

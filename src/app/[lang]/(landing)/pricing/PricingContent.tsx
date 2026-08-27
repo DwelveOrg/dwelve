@@ -50,7 +50,6 @@ export default function PricingContent() {
   return (
     <>
       <PageHeader
-        eyebrow={t("landing.pricing.eyebrow")}
         title={t("landing.pricing.title")}
         lead={t("landing.pricing.lead")}
       />

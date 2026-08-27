@@ -71,7 +71,6 @@ export default function ContactContent() {
   return (
     <>
       <PageHeader
-        eyebrow={t("landing.contact.eyebrow")}
         title={t("landing.contact.title")}
         lead={t("landing.contact.lead")}
       />
