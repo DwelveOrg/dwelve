@@ -60,7 +60,7 @@
     "eslint-config-next": "^16.1.6",
     "shadcn": "^4.0.5",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^7"
   },
   "comments": {
     "overrides.postcss": "next hard-pins postcss 8.4.31, which is older than the version @tailwindcss/postcss asks for and is covered by GHSA-6g55-p6wh-862q / -r28c-9q8g-f849 / -fxqj-rqcc-2cmp (arbitrary .map read via attacker-controlled sourceMappingURL). The override exists to lift that floor, so it must stay AT OR ABOVE the patched 8.5.23 — pinning it below reintroduces the advisory it was added to close."
